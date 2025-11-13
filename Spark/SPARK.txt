@@ -1,0 +1,53 @@
+WHAT IS SPARK ? 
+###############
+-> It is general purpose in memory computation engine.
+
+1. GENERAL PURPOSE
+==================
+Data cleaning - PIG
+Quary - HIVE
+ML operation - MAHOUT
+
+-> Spark is a each and every operation we can perform or do in spark itself
+   
+   data cleaning
+   SQL
+   Spark MLLIB
+
+2. COMPUTATION
+==============
+Hadoop vs spark
+---------------
+Hadoop provide 3 component
+1) HDFS - storage
+2) Resource manager
+3) Map Reduce - computation
+
+Spark - HDFS, Amazon S3
+
+3. IN MEMORY
+============
+RAM
+
+-> Spark does all computation in memory.
+-> Spark is faster then Map reduce.
+
+What are the benfits of Spark ?
+-> Fast
+-> Developer friendly
+-> Multiple workloads
+
+RDD in Spark
+############
+
+DAG AND LAZY EVALUATION
+#######################
+-> DAG is a Direct Acyclic Graph
+
+
+DATA FRAME
+##########
+-> DataFrame is a 2-D size-mutable, potentilly heterogeneous 
+   tabular data structure with lanleled axes(rows and columns)
+
+

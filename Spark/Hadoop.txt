@@ -1,0 +1,74 @@
+		######
+		HADOOP
+		######
+-> Hadoop is Open-source framework, that allows to store and process big data in a 
+   distributed environment across clusters of computers.
+
+-> It is used to store process and analyze data which are very huge in valume.
+-> Hadoop is distributed processing of large data sets across clusters of computers.
+
+	Architecture
+	############
+-> It fallows Master-slave architecture.
+-> Allows parallel processing of data.
+
+	Advantages
+	##########
+-> Easy to use
+-> Scalable
+-> cost-effective
+-> Improved performance
+-> Highly availble
+
+types of Hadoop
+===============
+1) HDFS
+2) MapReduce
+
+1) HDFS is derived from the GFS(Googal File System) in 2002.
+
+2) MapReduce is derived from GMR(Googal Map Reduce) in 2004 .
+
+-> File system -> File system is layear it act between software and hardware(read and write data from one to the hard disk).
+Ex: NTFS, EXT, HDFS, S3..
+
+-> block -> it distributed the 1GB of Data into small blocks.
+
+Types distributed system
+1) master-slave
+2) pear to pear
+
+		#########
+		MapReduce
+		#########
+
+data types
+==========
+Java		MR
+----		--
+int		intwritable
+float		floatwritable
+string		Text
+
+
+		#####
+		Spark
+		#####
+
+-> Spark is a Data processing technologies which will do both batch processing, Stream processing and analytic.
+-> Programming Language use are Scal, Java, Python, R.
+-> Linux, sql, prg lang
+-> Demon prosess - master, worker
+-> Deploment modes
+   -> Standalone(only one spark)
+   -> YARN 
+   -> meosos
+-> In memory processing
+-> spark Ripple
+   -> spark shell(scala)
+   -> pyspark
+-> Spark API
+   -> RDD
+   -> Data frame
+   -> Data set
+-> transformation, action((map, short , group),(count, show))

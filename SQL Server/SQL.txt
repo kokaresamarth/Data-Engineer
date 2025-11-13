@@ -1,0 +1,356 @@
+			##########
+			SQL Server
+			##########
+
+-> SQL server is a RDBMS product, which was introduced by microsoft in 1989.
+
+-> SQL is backend tool to developing/using a backend application.
+
+-> It is use to storing the data.
+
+-> It is not case-sencitive
+
+-> SQL is the platform dependent.
+
+-> SQL Server is run only Windows Operating System.
+
+-> Platform is a combination of OS & Processor.
+
+-> Types of Platform..
+   ---------------------
+	1) Platform Independent
+	2) Platform Dependent
+
+1) Platform Independent:
+
+  => It is a combination of Any OS & Any Processer
+
+  Ex: Oracle
+
+2) Platform Dependent
+
+  => It is combination of One OS & Any Processer
+
+  Ex: SQL
+
+-> SQL Server is give more GUI facilities
+
+-> Types of UI...
+   --------------
+	1) CUI (Character User Interface)
+	2) GUI (Graphical User Interface)
+
+1) CUI (Character User Interface)
+
+  => Every operation perform in DB by using Quary
+
+  Ex: Create table, insert data, delete table, update table etc...
+
+2) GUI (Graphical User Interface)
+
+  => Every operation perform in DB by using with out Quary
+
+  Ex: Create table, insert data, delete table, update table etc...
+
+------------------------------------------------------------------------------------------
+
+Work with SQL Server:-
+#####################
+
+Installing process
+------------------
+
+-> Install SQL Server software.
+
+-> It ask Instance Name (Ex: NIT).
+	
+-> In that name it allocat some Instance memory(NIT).
+	=> It will create no of Database in one instance memory.
+	=> In One Instance Memory We can create 32,767 Database.
+
+-> SQL Sercer is the collection of Databases.
+	=> Databse is a collection of different types of object(Tables, views, Synonms, Procedures, Function, Triggers...)
+
+-> After installation was completed successfully then you will be get one tool i.e SSMS.
+
+	=> SSMS (Sql Server Management Studio)
+
+	=> It is developing tool
+
+	=> it will give CUI, GUI enveronment to perform DB operations
+
+-> after clicking SSMS it will display a window like connect to server.
+	-------------------------------
+	|1) Server Type:_____>	       |
+	|2) Server Name:_____>	       |
+	|3) Authention :_____>         |
+	|3) User Name:_______	       |
+	|4) Password: _______	       |
+	|			       |
+	|Connect: Cancle: Help: Option:|
+	-------------------------------
+
+1) Server Types:
+================
+	1> Database Engine
+	2> Analysis Services (SSAS)
+	3> Reporting Server (SSRS)
+	4> Intigration Server (SSIS)
+	
+   => SSMS is developing tool intracting with Database Engine only. 
+   => BIDS is deve tool intracting with SSAS, SSRS, SSIS.
+	-> We these 3 tool called as MSBI Tool
+
+ 1> Database Engine
+ ------------------
+
+ -> It is core component/server.
+
+   * Store -> Store in Table formate (Rows And Columns).
+   * Process -> Processing like (Insert, Update, Delete, Select).
+   * Security -> Give security to the Data.
+
+ -> It will take major role to perform all operations on DB Tables
+
+ 2> Analysis Services (SSAS)
+ ---------------------------
+
+ -> It is MSBI tool.
+
+ -> It is useing in DataWare housing to store the data/information.
+
+ -> It is in 3D formate.
+
+ -> data is come form database engine only.
+
+ 3> Reporting Server (SSRS)
+ --------------------------
+
+ -> It is MSBI tool.
+
+ -> It is use to report in document to store the information of the organization.
+
+ -> Reports are in the form of document like .csv, msxl, xml, .pdf, .Tiff, word document files.
+
+ 4> Intigration Server (SSIS)
+ ----------------------------
+
+ -> It is MSBI tool.
+
+ -> It is use to converting from DB Tables to another DB Understand formate(SQL to Oracle).
+
+2) Server Name:
+===============
+
+ -> Server name is which system are you install your SQL Server software that system name take as a Server Name
+
+===========================================================================================================================
+					#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$$#
+===========================================================================================================================
+
+		########
+		DATABASE
+		########
+
+What is Database?
+=================
+-> A Database is a structured collection of data that can be easily stored, accessed and managed.
+
+-> It's like digital system for organizing and retriving information quickly.
+
+->A DBMS is software that helps create, manage, and interact with database efficiently.
+
+==================
+Types of Database?
+==================
+1) RDBMS
+
+2) Non-Relational(NoSQL)
+
+1) RDBMS
+--------
+-> Data must be in Structure and organized in the form Rows and columns.
+
+Ex: SQL, Oracle, Mysql
+
+2) NoSQL
+--------
+-> Data is in Unstructured or Semistructures.
+
+-> data can store in key-value pair, graph, wide columns, document.
+
+-> it is more flexible than RDBMS because we can store the data any order 
+
+Ex: mongo DB
+
+		###
+		SQL
+		###
+
+What is SQL?
+============
+-> SQL is Standard programming language used to store, retrieve, manage, and manipulate data in RDB.
+
+
+	types of SQL command
+	====================
+1) DDL-> Data Definition Language
+2) DML-> Data Manipulate Language
+3) DQL-> Data Quary Language
+4) DCL-> Data Control Language
+5) TCL-> transaction Control Language
+
+1) DDL
+------
+-> This are deals with objects of database like table, view, sequence etc..
+-> Create, Drop, Alter, Truncate
+	   ----	 -----  --------
+ 	-> Truncate -> (All the row will delete from the table but structure is preserved)
+	-> Drop -> (It will delete everthing / table)
+
+2) DML
+------
+-> Insert, Update, Delete
+	   ------  ------
+	-> Delete -> (Delete row wise)
+
+3) DCL
+------
+-> Grant, Revoke
+
+4) TCL
+------
+-> It has transaction of DB
+-> Commit, Rollback, Save Point
+
+5) DQL
+------
+-> It is used to retrive information from DB
+-> Select
+
+		DataTypes
+		=========
+        Data Type		What it store			Example	
+	---------		--------------			---------
+1) 	INT		Whole nor (e.g., 1, 100, -50)		storing age, quantity
+2)	BIGINT		Very large Whole nor			Tracking large ID's or counts
+3)	TINYINT		Small nor (0 to 255)			Status flags, rating out of 10
+
+4)	BIT		0 or 1(used for Yes/No or T/F)		IsActive, IsDeleted
+
+5)	DECIMAL(p,s)	Exact decimal value(p=total digit	price, money
+			, s=decimal place)		
+
+6)	CHAR(n)		Fixed-length text			Country code like'IND'
+7)	VARCHAR(n)	Variable-length text(up to n)		Name, email, cities
+8)	NVARCHAR(n)	Unicode text(support international	Names in multiple languages
+			 char)
+
+9)	DATE		Only the date(yyyy-mm-dd)		Birthdate, join date
+10)	DATETIME	Date+time				Order timestamp, login time
+
+
+		Constraints
+		===========
+1) PRIMARY KEY - Uniquely identifier each row(like customer ID)
+
+2) NOT NULL - Field most have a value
+
+3) UNIQUE - No duplicates allowed(good for email ID)
+
+4) CHECK - Adds conditions (e.g., age must be above 0)
+
+5) DEFAULT - Fills in a default value when no input is given
+
+6) FOREIGN KEY - Links two tables together
+
+
+		############
+		WHERE clause
+		############
+-> The WHERE clause is used to filter records and return only the rows that meet a given condition.
+			or
+-> WHERE clause restricted the record means those records unmatched in where clause condition, eliminate from the table.
+
+-> Use of WHERE clause are in like SELECT, DELETE, UPDATE.
+
+Syntax:
+-------
+1) SELECT * from table-name Where condition;
+
+2) Update table-name Set Column-name = new-data where condition;
+
+3) delete from table-name where condition;
+
+
+Operators:
+==========
+-> Operator are some character or keywords which is use on an expression to solve any operation.
+
+	  Operator	Meaning			 Example
+	  --------	-------			 -------
+	-> =		Equals			 City='Delhi'
+	-> <> or !=	Not equal to		 Age1 <> 30
+	-> >,<		Greater then, less then	 Age > 25
+	-> >=,<=		Greater/Less or  Equal	Age>=18
+	-> AND		Combine condition	 City='xx' AND Age > 10
+	-> OR		Either condition is 	 City='Delhi' or City='Mumbai'
+		true
+	-> NOT		Negative a condition	 NOT City='Delhi'
+
+
+		OPERATOR
+		========
+1) BETWEEN Operator -> The BETWEEN operator is used to filter result within a range 
+		       (inclusive of the satrt and end value)
+
+2) IN Operator -> The IN operator is used to match a column against multiple values 
+		  without writing multiple or conditions.
+
+3) LIKE Operator -> It is uses for pattern margin with string in SQL.
+		    -> % - Matches zero or more characters. ('a%' - starting , '%e' - ending, '%ar%')
+		    -> _ - Matches exactly one character.  ('_a%' - second char must a only, )
+
+4) order by -> It show Assinding order
+
+
+		###############
+		GROUP BY clause
+		###############
+-> GROUP BY groups rows that have same values in a column, so you can apply aggregate function on each group.
+
+AGGREGATE FUNCTION
+==================
+Function	What it does	Example in Context
+--------	------------	------------------
+COUNT()		Counts rows	How many customers You have
+SUM()		Adds up values	Total of all customer ages
+AVG()		Average value	Average age of customers
+MIN()		Minimum value	Youngest customer's age
+MAX()		Maximum value	Oldest customer's age
+
+
+		#############
+		HAVING Clause
+		#############
+-> HAVING is used with GROUP BY to filter groups based on aggregate conditions.
+
+Note: WHERE filters brfore grouping
+      HAVING filters after grouping
+
+
+Concept of JOINS
+=================
+Types		What It Does			Real-life analogy
+-----		------------			-----------------
+INNER JOIN	Only matching data from		People who placed orders
+		both table
+
+LEFT JOIN	All from left table+matches	All customers, ever those with
+		from right			no orders
+
+RIGHT JOIN	All from right+match from	All orders, even if customer
+		left(less common)		details are missing
+
+FULL JOIN	All data from both,matched	Everyone and everything
+		or not

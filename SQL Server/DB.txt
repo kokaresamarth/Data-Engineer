@@ -1,0 +1,19 @@
+kokaresamart0@gmail.com
+sam123
+
+Global DB name: samarth
+password: Sam@12345
+
+how to ckeck in cmd  -> sqlplus / as sysdba
+
+==================================================================
+
+samarthkokare/Sam@8123
+
+orcl/orclpdb
+
+username: sytem
+password: Sam@8123
+
+====================================================================
+

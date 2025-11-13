@@ -1,0 +1,336 @@
+			=======================
+			Spark Overview(Theory)
+			=======================
+
+| Level         | Spark Usage | What You Should Know                                 |
+| ------------- | ----------- | ---------------------------------------------------- |
+| **Fresher**   | Basic       | Understand Spark concepts and simple transformations |
+| **Mid-Level** | Core        | Build ETL jobs, use PySpark, optimize pipelines      |
+| **Senior**    | Expert      | Tune performance, manage large-scale Spark jobs      |
+
+
+
+
+What is Apache spark?
+=====================
+-> spark do not store anywhere(no storage)
+
+-> spark can connect with different data source like S3, HDFC,JDBC AZURE etc...
+
+-> spark works with almost all data storage system
+
+-> Apacha spark is a unified, computing engine and set of libries for
+   parallel data processing on computer cluster.
+
+-> unified =>spark is design to support wide range of task over the same computing engine
+
+------------------------------------------------------------------------------------------------------------------
+			################
+			Why Apache spark
+			################
+------------
+Before spark
+------------
+Database -> Oracle, Teradata, exadata, MySQL
+
+->		Structure format
+		----------------
+	 ________________________________	
+	|col 1	|col 2	|col 3	|col 4	|
+	|------	|------	|------	|------	|
+	|------	|------	|------	|------	|
+	|------	|------	|------	|------	|
+	|	|	|	|	|
+	|	|	|	|	|
+	|_______|_______|_______|_______|				
+
+-> After internet=> data can store in file-> text, csv, image, video
+	-> data can came from different form
+
+-> JSON, YAML -> store in Semistructure
+
+-> so volume will increases
+
+	=> Big Data
+	   ========
+	1) Volume  -> 5GB, 10GB, 1TB
+	2) Velocity-> 1sec, 1hour
+	3) variety -> Structure, SemiStructure and Unstructure
+	
+-> ETL -> Extract Transform Load
+   ELT -> Extract Load Transform 
+
+-> ISSUES
+   ------
+	1) Storage
+	2) Processing -> - RAM
+			 - CPU
+
+-> we apporach in two way
+ 	1> Monotholic Apporach
+	2> Distrubuted Apporach
+
+1) Monotholic Apporach
+-----------------------
+-> Vertical Scaling
+-> Expensive
+-> Low availablity
+
+2) Distrubuted Apporach
+------------------------
+-> Horizontal Scaling
+-> Economical
+-> High availablity
+
+for Distrubuted Apporach
+========================
+-> Hadoop came
+-> Then, Spark
+
+-------------------------------------------------------------------------------------------------------
+			 Hadoop
+		 	 ======
+
+-> In 2006, group of engineers at Yahoo developed a special Software framework called " Hadoop "
+
+-> they were inspired by Google MapReduce and Google File System technology.
+
+-> Hadoop introduced a new way of data processing called "Distributed processing" instted of a single machine 
+   we can use multiple computers to het final result
+
+-> Two imp component of Hadoop
+	1) Hadoop Distributed File System (HDFS)
+	2) MapReduce
+
+1) HDFS
+--------
+-> it divides our data into multiple chunks and store all of this data across different computers
+
+2) Map Reduce
+-------------
+-> It helps in processing all of this data in parallel 
+
+-> you can divide your data into multiple chunks and process them together (like team work).
+
+Issue
+-----
+-> it storing data on disk, it read the data, process it, and then again through a disk  
+
+-> it made data processing is slower
+
+			Apache Spark
+			============
+
+-> In 2009, researchers at the University of California, Berkeley, developed Apache Spark as research project.
+
+-> The reason behind the development of Apache Spark was to address the limitations of Hadoop.
+
+-> This is where they introduced powerful concept called RDD (Resilient Distributed Dataset).
+
+-> RDD is the backbone of Apache Spark.
+
+-> It allows data to be stored in memory and enable faster data access and processing.(Instead of reading and writing data from disk)
+
+-> Spark processes the entire data in just memory. meaning of memory here is RAM stored inside our computer.
+
+-> in memory processing of data makes Spark 100 times faster then Hadoop.
+
+-> Spark also give ability to write a code in various programming language like python, scala, java
+
+-> spark become very famous because it was fast, could handle lot of data, process it efficiently.
+
+-> component attached to Apache Spark are......
+	1) Spark core
+	2) Spark SQL
+	3) Spark Streaming
+	4) MLlib
+
+Spark storage
+=============
+   1) DB
+   2) File-system
+
+1) DB storage types
+--------------------
+1)RDBMS - Oracle, MySql
+2)NoSQL - Hbase
+
+2) File-system storage types
+----------------------------
+1)SFS(Standalone-File-System) - Windows file system, EXT, Mac file system
+2)DFS(Distributed-File-System) - HDFS, S3
+
+------------------------------------------------------------------------------------------------------------------------------
+
+			==================
+			Spark Architecture   (Restorent)
+			==================
+										   <ass.CHF>
+										------------
+_________________ <------------------------------------------------------------>|worker node|
+|  <CHF>	 |								|(executer) | (task)
+|		 |			----------------- <----------------->	|___________|
+|  Drivr prg	 |			|   Cluster      |
+|		 |<-------------------->|  Manager	 |
+|  (spark	 |			|   <owener>	 |			--------------
+|  context)	 |			-----------------  <----------------->	|worker node  |
+|________________|								|(executer)   | (task)
+		  <------------------------------------------------------------>|_____________|
+										    <ass.CHF>
+
+
+
+-> It follows the Master-slave architecture. it works on concept of clusters.
+
+-> A cluster is a group of machines that work together to process and analyze data.
+
+-> Spark distrubuted the data and compitation across multiple nodes in cluster , allow for parall 
+   processing & fast the data.
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+		==============
+		Transformation
+		==============
+
+-> Transformation is the process of converting raw data into a clean, structured, and usable format
+   for analysis, reporting, and other downstream applications. 
+
+-> types of transformation,,
+	1) Narrow dependencey
+	2) Wide dependencey
+
+1) Narrow dependencey
+---------------------
+-> Transformation that doesn't require data movement between partitions.
+
+-> Ex: filter, select, union, map() etc..
+
+2) Wide dependencey
+-------------------
+-> Transformation that require data movement between partitions.
+
+-> Ex: Join, groupby, distinct etc.. 
+------------------------------------------------------------------------------------------------
+
+		========================
+		DAG and Lazy Evaluation
+		========================
+-> DAG is a Directed Acyclic Graph
+
+-> Lazy Evaluation -> it is nothing but until and unless u call the action execution is not happend
+----------------------------------------------------------------------------------------
+
+		================	
+		Spark SQL engine
+		================
+-> what is catalyst optimizer / spark SQL engine?
+-> why do we get Analysis exception error ?
+-> what is catalog ?
+-> what is physical planning/spark plan?  => swaping of data
+-> Is spark SQL engine a compilear?  => yes
+-> How many phase are involed in spark SQL engine to convert a code into Java byte code?
+
+ __________
+|          |			 ________________		  RDD	
+|SQL	   |---------------->	|		|		-------|
+|__________|			|		|		|      |
+				|catalist optz	|		|______|
+ __________			|	or	|			
+|          |			|    spark	|------>
+|Dataframe |---------------->	|  SQL engine	|
+|__________|			|		|															
+				|		|
+ __________			|_______________|
+|          |--------------->						
+|dataset   |													
+|__________|																				
+
+-> Catalog is nothing but metadata of data.
+
+-> 4 phases of spark SQL engine
+   ----------------------------
+1) Analysis
+2) Logical planing optimization
+3) physical planning
+4) code generation
+
+-----------------------------------------------------------------------------
+
+			====
+			RDD
+			====
+
+-> RDD stant for Resilient Distributed Dataset
+
+->Resilient -> In case of failure, recovery / fault tolerance
+->Distributed -> over the cluster / i/p data is stored across all worker nodes
+->Dataset -> actual data / data that we provided
+
+-> RDD is a immutable
+
+-> it use Unstructured data.
+
+features of RDD
+---------------
+-> immutable, Lazy, optimization
+
+1) when we need RDD?
+-> full controll on our data like Unstructure data.
+
+--------------------------------------------------------------------------
+
+		==============================
+		spark session vs spark context
+		==============================
+-----------------------------------------------------------
+		========================
+		spark Job, Stages, Tasks
+		=========================
+1) what is Job, Spark, Task in spark ?
+-> Application -> spark submit of cluster
+   Job -> Action
+   Stage -> Logical plan transformation
+   Task -> actual data perform
+
+2) 
+
+------------------------------------------------------------
+		=======================
+		Repartition vs coalesce
+		=======================
+
+Repartition 
+============
+-> Data will be shuffling / increasing/decresing partitions
+-> it is expensive 
+
+coalesce
+========
+-> data will not shuffling / reducing partitions
+-> not expensive
+
+----------------------------------------------------------------
+		======================
+		Join Strategy in spark
+		======================
+
+-> Join is more expensive
+
+1) What are the Join Strategies in spark ? 
+   1> Shuffle Sort-Merge Join (SMJ)
+   2> Shuffle Hash Join (SHJ)
+   3> Broadcast Hash Join (BHJ)
+   4> Cartesion Join
+   5> Broadcast Nested Loop Join (BNLJ)
+
+1> Shuffle Sort-Merge Join (SMJ)
+--------------------------------
+-> it execute in CPU
+
+2> Shuffle Hash Join (SHJ)
+--------------------------
+-> it execute in memory only
+
+3> Broadcast Hash Join (BHJ)
+----------------------------

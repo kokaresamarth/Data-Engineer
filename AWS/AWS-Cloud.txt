@@ -1,0 +1,587 @@
+🧰 Most Common AWS Services Used by Data Engineers
+==================================================
+
+S3 – Data lake storage	(Data Storage)
+
+Glue – ETL, Data Catalog	(Data Processing and Transformation (ETL / Big Data))
+
+Redshift – Data warehouse	(Data Storage)
+
+Athena – Serverless querying	(Data Analytics and Querying)
+
+EMR – Big data processing
+
+Kinesis – Real-time streaming data	(Data Ingestion)
+
+QuickSight – Visualization & reporting	(Data Analytics and Querying)
+
+IAM, CloudWatch, KMS – Security & monitoring	(Security, Governance & Monitoring)
+
+Step Functions / Airflow – Orchestration
+
+#######################
+What is Infrastructure
+#######################
+
+			=======================
+			### Infrastructure  ###
+			=======================
+=====================			=================
+School Infrastructure			IT Infrastructure
+=====================			=================
+
+-> Board				-> Machines
+-> table				-> Web Servers
+-> Chairs				-> Application Servers
+-> Markers				-> Database Server
+-> Duster etc....			-> Network
+					-> Power
+					-> Storage
+					-> Security
+					-> Monitoring
+
+					===================================
+					IT Infrastructure Management Issues
+					===================================
+
+					-> Security & Privacy
+			       		-> Scalability
+					-> avilabilty
+					-> Poor Network Issues
+					-> Disaster Recoery
+
+======================================
+####  Two types of Infrastruction ####
+======================================
+
+1) On Premise Infrastruction  ( we have to manage)
+
+2) Cloud Infrastruction       (cloud provider will managr)
+
+	=========================
+    1)	On Premise Infrastruction 
+	=========================
+
+	->   If we setup infrastructure on our own then it is called as on-premises / in-house infrastructure
+
+ 	->   We need to take purchace everything 
+
+  	->   We need to take setup everything
+
+	->   We will manage the both Infrastructure and Development
+
+	======================
+     2)  Cloud Infrastruction 
+	======================
+
+	->   It will give for the rent
+
+		->   like storage and scalability
+
+		->   like Server and Database
+
+		->   like computer and security
+
+		->   Ultimited Storage and Backup
+
+=======================================================================================
+
+#########################
+What is Cloud computing?
+#########################
+
+-> Providing IT Resources on demand basis over the internet
+
+(or)
+
+-> Delivering IT Resources over the internet based on demand
+
+-> Cloud Providers giving infrastrucure bases on 'Pay As You Go'
+
+---------------------------
+Cloud Computing Advantages
+---------------------------
+
+1) Pay As You Go Prising
+
+2) Low Cost
+
+3) Availablity (24/7)
+
+4) Scalabilty (Scale Up & Scal Down)
+
+5) Realiabilty (Strong)
+
+6) Security
+
+7) Unlimited Storage
+
+8) Backup
+
+Note: If we setup infrastructure on our own then it is called as on-premises / in-house infrastructure
+-> in-house infrastructure is costly
+-> Managing in-house infrastructure in verey very difficulty
+
+-----------------
+Cloud Providerrs
+-----------------
+
+-> We have serverl cloud providers in market
+
+1) Amazon (AWS Cloud)
+
+2) Microsoft (Azure Cloud)
+
+3) Googal (GCP)
+
+4) Salesforce (Salesforce CRM)
+
+5) IBM (IBM Cloud)
+
+6) Oracle (Oracle Cloud)
+
+7) Alibaba Cloud 
+
+8) VM ware Cloud etc..
+
+---------------
+Cloud Services
+---------------
+
+1) IaaS
+
+2) PaaS
+
+3) SaaS
+
+-> Infracture as a service 
+
+	(Using Cloud Infrastructure we should prepare platform to run application)
+	ex: AWS, Azure, GCP..
+
+-> Platform as a services 
+
+	(Cloud Provider will give to run our application)
+	ex: AWS, Azure, GCP..
+
+-> software as a services
+
+	(Cloud Provider will give a software to use for our business)
+	ex: Drive, Zoom ...
+
+Note: AWS is more famous for IAAS in the market
+
+-> AWS provideing IT resources for 190+ countries
+
+#########################
+AWS Global Infrastructure
+#########################
+
+-> AWS maintaing Infrastucture using Regions & Availability Zoon
+
+
+1) Regions (Geographical Location)
+
+2) Availability Zoones (Data Centers)
+
+-> 26 Regions & 84 Availableity Zoons
+
+Note: In one region, multiple Availablity Zoons will be Available
+
+In India, AWS having one Region i.e Mumbai (code:  ap-south-1)
+
+-> In Mumbai region, AWS gaving 3 AZs
+
+ap-south-1a
+ap-south-1b
+ap-south-1c
+ 
+Note: Each AZ will have 100kms distance
+
+#####################
+AWS Free Tier Account
+#####################
+
+-> We can free account in AWS
+
+-> Under Free tier we can use AWS server for 1 year
+
+Note: If bill got generated for usage, AWS will not perform Auto Deduction.
+
+-> As a student, we can request AWS to waveoff our bill amount
+
+Note: If bill got generated and if you dont't pay that bill amount AWS will send multiple reminder to
+      pay bill....if you don't pay bill AWS will terminate your account
+
+-----------------------------------------------------------------------------------------------------------------
+
+#####################
+Setup Linux VM in AWS
+#####################
+
+=> For EC2 Instance ( VM/Server )
+ 
+ 	-> AMI decide which type of machine we take 
+
+ 	-> AMI reprecent which OS we need for VM (like windows,linux, mac)
+
+ 	-> Instance Type
+
+ 	-> Key-pair
+
+ 	-> Network (VPC)
+
+ 	-> Firewall
+
+	-> Storage
+
+=> Launch Instance  
+
+ 	-> give name of instance
+
+ 	-> select AMI 
+
+ 	-> t2 micro
+
+ 	-> Create Key-Pair
+
+ 		-> Public Key - It is avilable/stored in AWS Cloud
+
+ 		-> private Key - It is downladed in VM
+
+	 -> public Ip : dynamin ip
+
+	 -> Private Ip : fixed ip
+
+####################
+Types of IP's in AWS
+####################
+
+1) Private IP ( Fixed ip for internal communication, we cannot use outside  )
+
+2) public IP ( Dynamic IP and it is used access resources outside )
+
+3) Elastic IP ( It is fixed public ip - it is commercial )
+
+-----------------------------------------------------------------------------------------------------------------
+
+					################
+					AWS EC2 Services
+					################
+
+-> EC2 is the most demanded services  in AWS cloud
+
+-> EC2 stands for Elastic Compute Cloud
+
+-> EC2 is used to create Virtual Machines
+
+	Ex: Linux VM, Windows VM, MAC VM etc....
+
+-> EC2 Virtual machine is called as EC2 instance /VM / Server
+
+EC2 instance billing will be calculated on Hourly basis
+
+-> EC2 instance minimum billing period is 1 hour
+
+Note: With AWS Free tier account 1st one year EC2 instance are free (Monthly 750 hours)
+
+		(t2.micro) 
+
+-> EC2 instance are resizable (Scale up, Scale down)
+
+
+1) EC2 service is used to create Virtual machines
+
+2) AMI (Amazon machine Image - configuration required for instance)
+
+3) Instance Type (t2.micro - free tier eligible - 1 year - monthly 750 hrs)
+
+4) Key Pair (public & private keys)
+
+5) VPC (Isolated network) - default vpc
+
+6) Security Group (inbound rules & outbound rules)
+
+7) EBS Volume (Elastic Block Storage - 8GB for Linux)
+
+  -> Note: one Key-Pair we can use for multiple EC2 Instances
+
+  -> Note: One Security Group we can use for Mutiple EC2 instance
+
+8) Types of IP's ()Public ip, private ip and elastic ip
+
+
+==================
+EC2 Instance Types
+==================
+
+1) On demand Instances
+
+2) Reserved Instances
+
+3) Spot Instances
+
+4) Dedicated Host
+
++++++++++++++++++++++
+1.On demand Instances
++++++++++++++++++++++
+
+-> When we need it we can create it
+
+-> Fixed Price
+
+-> Pay for what you use
+
+-> No Commitment
+
+-> No Upfront payments
+
+++++++++++++++++++++
+2.Reserved Instances
+++++++++++++++++++++
+
+-> Long Term Commitement
+
+-> Upfront Payment we have to do
+
+-> 1 or 3 years
+
+-> AWS will provide discount for EC2 instance Reservations
+
+++++++++++++++++
+3.Spot instances
+++++++++++++++++
+
+-> Bidding
+
+-> Auction
+
+-> High End system (Huge Capacity) For Low Price
+
+++++++++++++++++
+4.Dedicated Host
+++++++++++++++++
+
+-> Physical Computer
+
+-> Licensed Softwares
+
+-> Dedicated Host is much costlier then other instance types
+
+============
+EC2 Familles
+============
+
+Family Member-> instance types
+
+t2.nano==> 0.5GB RAM, 1vCPU
+
+t2.mano==> 1GB RAM, 1vCPU
+
+t2.small==> 2GB RAM, 2vCPU
+
+t2.medium==> 4GB RAM
+
+t2.large==> 8 GB RAM
+
+t2.xlarge ==> 16 GB RAM
+
+===================
+EC2 Instances State
+===================
+
+1) Launch State
+
+2) Running  (Billing applicable for Running State)
+
+3) stop (No Billing)
+
+4) Reboot
+
+5) Terminate (Destroy)
+
+
+===================================
+Launching Virtual machine using EC2
+===================================
+
+=> EC2 services will use below component to provide virtual machines for us
+
++++++++++++++++++++++++++++++
+1) AMI (Amozan machine image)
++++++++++++++++++++++++++++++
+
+-> It provides a template to launch virtual machine
+
+	Ex: Windows AMI, Amazon Linux AMI, Ubuntu AMI, Red Hat AMI, Mac AMI
+
+-> We can create our own AMI also
+
++++++++++++++++++++++++++++++++++++
+2) EBS Volume ( Elastic Block Store)
+++++++++++++++++++++++++++++++++++++
+
+->  By default EBS root volume will be attached to EC2 instance
+
+	Windows--->30 GB (by default)
+
+	Linux----> 8GB (by default)
+
+Note: WE can increase volume size based on demand
+
+++++++++++++++++++++++++++++++
+3) VPC (Virtule Private Cloud)
+++++++++++++++++++++++++++++++
+
+-> VPC will provide network for instance
+
+-> To connect with EC2 instances we need network for that
+
+++++++++++++++++++
+4) Security Groups
+++++++++++++++++++
+
+-> Security Groups used to allow incoming & outgoing traffic
+
+-> Inbound Rules will maintain incoming traffic rules
+
+-> Outbound Rules will maintain outgoing traffic rules
+
+	Windows---> RDP : 3389
+
+	Linux----> SSH : 22
+
+	HTTP-----> HTTP : 80
+
+	HTTPS ----> HTTPS : 443
+
+	Tomcat ----> TCP : 8080
+
++++++++++++
+5) Key-Pair
++++++++++++
+
+-> Key-Pair is kind of Lock to Secure our EC2 instances
+
+-> Key-Pair is used to connect with EC2 instance security
+
+-----------------------------------------------------------------------------------------------------------------
+
+					#######
+					AWS RDS Services
+					#######
+
+=> RDS stands for Relation Database Service 
+
+=> It is used to create Relation Database in AWS Cloud
+
+=> RDS is fully managed service in AWS
+
+=> If we create Database using RDS then we can directley use that database and we can
+   perform operations with Database wihtout bothering about maintence. 
+
+####### Note: Maintence, Management, Security & Backup will be taken care by AWS.
+
+Note: RDS is paid service.
+
+=> AWS support for serval Relational Databases
+
+	Ex: Oracal, MySQL, postGares, SQL Server, Aurora....
+ 
+-----------------------------------------------------------------------------------------------------------------
+ 
+					#######
+					AWS IAM Services
+					#######
+
+=> Identity and Access management
+
+=> It is used to create users, user groups and user permissions
+
+=> When we sign up in AWS, by default we will get Root Account.
+
+=> Root account is very powerfull account, we can access everything in aws using 
+   root account.
+
+Note: For team members, root account credentials will not be shared.
+
+=> For every team member, IAM account will be created.
+
+=> For daily activities in AWS  cloud, we will use IAM account only.
+
+
+=> AS root account is powerful account, we need to provide high security for Root account
+
+=> To provide high security for root account we can use MFA 
+	(Multi Factor Authentication)
+
+=> IAM Work by.....
+	1) Authentucation: verifing who are 
+	2) Authorization: IAM checks your policies to deside what actions you allowed to perform
+	3) Access Evaluation Logic: AWS denies by default; only explicit Allow grants access
+
+Note: WE can use Googal Authenticatior app app to provide MFA for root account.
+
+-----------------------------------------------------------------------------------------------------------------
+
+					######
+					AWS S3 Services
+					######
+
+=> S3 stands for simple storege service
+
+=> We can store unlimited data in using S3 sevices in AWS cloud
+
+=> S3 will store data in the form Objects
+
+	Object ==> File
+
+=> characterstacs of S3
+   --------------------
+	-> Scalable
+	-> Highly availble
+	-> Secure
+        -> Cost effective
+	-> Performance
+
+=> S3 services allows you to create bucket in which you can store anything..
+	
+	like -> image, video, csv, file 
+
+-------------------------------------------------------------------------------------------------------------------
+
+					###############
+					Amazon RedShift Services
+					###############
+-> for data WeareHouse
+
+-------------------------------------------------------------------------------------------------------------------
+
+					############
+					Amazon Glue Services
+					############
+-> for data Transformation
+
+-------------------------------------------------------------------------------------------------------------------
+
+					#################
+					Amazon CloudWatch Services
+					#################
+
+-------------------------------------------------------------------------------------------------------------------
+
+					##########
+					Amazon EMR Services			
+					##########
+youtube
+
+-------------------------------------------------------------------------------------------------------------------
+
+					#############
+					Amazon Athena Services
+					#############
+youtube
+
+
+

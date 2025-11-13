@@ -1,0 +1,167 @@
+	==========
+	Linux OS ?	
+	==========
+
+=> It is free
+
+=> Linux is Very Secured
+
+=> Linux Multi User Operating System
+
+=> Linux is Highly recommed OS to run Server and Database...
+
+=> Linux is recommended for Business Purpose
+
+=> Linux is CLI ( commend line interface ) based.
+
+===============
+Linux History ?
+===============
+
+-> Initially we had UNIX OS
+
+-> Linus Torvals identified some issue in UNIX OS and informed to Unix Team.
+
+-> unix Team did not accept Linux  Torvalds suggesion.
+
+-> Linux Torvalds developed hos own Operating System by using Minux OS.
+
+		( Li ) nus + Mi ( nux ) ==> Linux OS
+
+-> Linus Torvalds released Linux OS into market with free of cost along with source  code.
+
+-> so many companies taken Linux OS source code and modified according to there requirement and 
+   released into market with different names those are called as Linux Distribtions.
+
+		1) Ubuntu Linux
+		2) Red Hat Linux
+		3) Debian LInux
+		4) fedora Linux
+		5) SUSE Linux
+		6) Kali LInux
+		7) Cent OS Linux
+		8) Amazon Linux
+====
+Note: -> We have 200+ Linux distribution.
+====
+
+=======================
+Linux Environment Setup
+=======================
+
+1)  Create AWS account ( Free Yier ) Install Linux OS in computer
+
+2)  Create EC2 instance with Amazon Lineux Virtual Machine
+
+3)  Download MobaXterm/putty Software
+
+4)  Connect to EC2 Linuc VM using MobaXterm/putty
+
+
+				==============
+			 ###	Linux Commands    ###
+				==============
+
+Whoami : Displays logged in user interface
+
+date   : prints todas's date
+
+cal    : print current month calender
+
+pwd    : display present working directory
+
+mkdir  : Create new  directory
+
+rmdir  : Remove empty directory
+
+cd     :    change directory   
+	    	-> cd .. : come back directory
+
+Is     :    list files 
+		-> ls -l  : list the file in alphabetic order
+		-> ls -lr : reverse of alphabetic order
+		-> ls-ltr : 
+		-> ls -lt : list the file time based 
+
+touch  : To create empty file
+
+cat    : Create file with content & display file content ( create / update / display )
+
+	=>	cat > filename  : Create file with date  (we will loose old data)
+	=>	cat >> filename : update date at the bottem
+	=>	cat filename 	: display file content
+
+	Note :  cat -> read from top to bottom
+		tac -> read bottom to top
+
+rm 	: to remove the file
+   rm -r dirname : to delete the non empty  file ( remove recursiv )
+
+mv 	: To rename  file / directory
+
+cp 	: To copy data from one file to another file
+
+wc 	: word count  (line, words, characters)
+
+head    : Give first 10 lines of file (10 is defaolt)
+
+	=>	haed -n 12 <filename>   (gives first 20 lines)
+
+tail 	: Give last 10 lines of file
+
+	=>	tail -n 12 <filename>   (gives last 12 lines )
+
+	=>      tail -f <filename>      (on-growing data)
+
+grap    : global regural expression printer ( it for data finding )
+
+	  =>  grap 'Linux' <filename> : find the operation ( it is case sensitive )
+
+	  =>  grap -i 'as' <filename> : not case sensitive
+
+
+for editing the file  ( vi <filename> )
+vi     :  visual editor ( to modified file content )
+	=>  vi <filename>
+
+	    ->	insert made : i
+	    ->	save and quite : ESC + :wq
+	    ->	quite without saving : ESC and : q!
+
+    	To check it
+	   =>  cat <filename>
+
+chmod    : To change file permissions
+
+chown    : To change file ownership
+	
+check ver: java -version 
+
+Install  : sudo yum install java     
+
+ctrl+t	 : close the file
+
+ctrl+r   : reconnect the VM
+
+
+
+--------------------------------------------------------------------------------------------------------------
+
+====================================
+How to install softwares in Linux OS
+====================================
+
+-> Linux OS provided Package Manager to install any software
+
+Amazon Linux / Red hat : yum (sudo yum instakll java)
+
+Ubuntu / Debin : apt  (sudo apt install java) 
+
+
+
+
+
+
+
+
+  

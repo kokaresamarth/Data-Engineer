@@ -1,0 +1,5 @@
+ What is Spark Cluster ?
+-> it is a group of machine.
+ 
+what is Databricks ?
+-> databricks is a managing cluster.

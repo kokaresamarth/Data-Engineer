@@ -1,0 +1,119 @@
+		Reading Data in Spark
+		=====================
+
+Core structure
+--------------
+1) Dataframereader.formate(_____)\
+		  .option("key", "value")\
+		  .schema(___)\
+		  .load(___)
+
+-> formate => Data file formate
+   -------		csv, JSON, JDBC/ODBC, Table, parquet
+     |->optional
+
+
+	-> option => inferschema, mode, header
+
+	-> schema => manuak schama you can pass
+
+	-> Load => path where our data is residing
+
+	-> DtaframeReader API
+		-> how to access?
+			-> Spark.read
+
+
+Example:
+-------
+	spark.read.formate("csv")\
+		  .option("header","true")\
+		  .option("inferschema","true")\
+		  .option("mode","FAILFAST")\
+		  .load("c:\user\download\datacsv")
+
+ Mode
+ ----
+1) Fail fast -> fail execution if malformed record in dataset
+
+2) Dropmal formed -> Drop the corrufted record
+
+3) permissive -> Default -> set null value to all corrufted fields
+
+CSV
+---
+-> comma separeted value
+
+-> id, name, age,  salary
+   1,  sam,   23,  10000
+   2,  abhi,  30,  20000
+   3,  manju, 19,  30000
+
+------------------------------------------------------------------------------------------
+		create manual schema
+		---------------------
+-> how to create schema in pyspark?
+-> what are other way to create it?
+-> what is structfield and structtype in schema?
+-> what if 9 have header in my data?
+
+schema have two type
+1) structType, structField
+2) DDL
+
+1) structType - which define our structure of DF 
+   structField - list of struct field.(id,name. age<down side>)
+
+2) ddl_my_schema = "id integer, name string, age integer"
+----------------------------------------------------------------------
+			Corrupted record handle
+			------------------------
+
+-> Have u worked with corrupted record?
+-> when u said that is corrupted record ?
+-> what happens when we encounter with corrupted records in different read mode?
+-> how can we print bad records?
+-> where do you store corrupted records and how can we access it later?
+
+Read mode have 3 types
+1) Permissive
+2) drop mal formate
+3) failfast 
+
+
+------------------------------------------------------------------------------
+			JSON File Reading
+			-----------------
+-> what is Json and how to read in  spark ?
+-> what if I have 3 keys in all line 4 key in one line?
+-> what is multiline and line-delimited json ?
+-> which one works faster multiline and line-delimited ? => line-delimited
+-> how to convert nested json into spark Dataframe ?
+-> what will happen if I have corrupted json file or invalid json file ?
+
+-> JSON (JavaScript Object Notation)
+-> json is a key-value pair data.
+-> json is a semistrured data
+
+Ex: key-value -> {"id":"1","name":"samarth":"age","25"}
+
+--------------------------------------------------------------------------
+		Apache Parquet file
+		-------------------
+1) What is Parquet ?
+
+-> Parquet is a file formate like CSV, Text, JSON
+-> it is structured file formate.
+-> it is Binary form.
+-> it is columnar based file formate -> ex: Parquet, ORC
+-> it is Row based file formate -> ex: CSV, JSON
+
+
+	OLAP				|		OLTP	
+	----				|		----
+-> Online Analytical Processing		|	-> Online Transaction Processing
+-> only few columns read 		|	-> It is write Insert, Update, delete		
+
+
+
+

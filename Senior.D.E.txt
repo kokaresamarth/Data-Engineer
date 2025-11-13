@@ -1,0 +1,9 @@
+Summary for Senior Data Engineer Stack:
+---------------------------------------
+
+-> Core		: Databricks, Spark, Airflow, Kafka, Delta Lake
+-> Cloud	: AWS / Azure / GCP
+-> Governance	: Unity Catalog, Great Expectations
+-> Infra	: Terraform, GitHub Actions, Docker, Kubernetes
+-> Monitoring	: Grafana, Prometheus, Datadog
+-> BI		: Power BI, Tableau

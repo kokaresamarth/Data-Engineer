@@ -1,0 +1,75 @@
+		#########
+		Oracle DB
+		########
+-> Oracle is a powerfull relational DB Software, developed by "Larry Ellison" & his friend "Bob miner & ED oats" in 1977.
+
+History
+=======
+-> 1979 RSI(Relation Software Instance) developed oracle V2 just support SQL.
+-> 1982 change name "Oracle corporation".
+-> 1983 Oracle V3 develope in C.
+-> 1984 V4
+-> 1985 V5
+     |
+->2019 Oracle 19c.
+
+DataBase?
+=========
+-> Organised collection of data in a particular formate, so that it can be easily accessed and managed
+
+Advantages:
+===========
+-> Data retrieval
+-> Security
+-> Data redundance
+-> Data integrity
+-> Indexing
+
+Object of Oracle:
+=================
+-> Table: It is used to store infornation.
+-> view: Logically represent subset of data from one more tabulor view.
+-> sequence: Used to greate promary key values.
+-> Index: It is used to improve the performance of quary.
+-> Syntax: Used to give alternet name to object.
+
+What is Data types?
+===================
+-> it is type of informance & the amount of spaces required for a particular column.
+
+Data types
+----------
+1) String
+2) Numeric
+3) Date
+4) LoR
+
+1) String
+---------
+-> char(size) - 200 bytes
+-> varvhar(size) 4000 bytes
+-> nchar(size) - 200 bytes
+-> nvarchar2(size) - 4000 bytes
+
+2) Numeric
+----------
+-> number(p,s)
+
+3) Date
+-------
+-> Date & time
+
+4) LoR
+------
+-> CLoR
+-> BLoR
+-> BFile
+
+Rules of create a table
+=======================
+-> The name of table must be unique in oracle database
+-> The maximum length of table is 30 character long
+-> A table contain maximum 1000 Columns and Unlimiyted rows
+-> The attribute name of table must be unique
+-> The name of table can be define by the help of alphabet it it could be in 
+   upper case or  lower case digits & 3- special sumbols(-,#,$)
