@@ -1,0 +1,44 @@
+		#######
+		Airflow
+		#######
+
+History
+=======
+-> Airflow was developed at Airbnd in 2014 to manage their growing number of complex data workflows.
+
+-> It is open source project under the Apache Software Foundation, with a large and active
+   community contributing to its development and providing support.
+
+What is Apache Airflow
+----------------------
+-> It is a batch oriented framework for managing, data piplines and scheduling it
+
+-> Apache Airflow is an open-source workflow management platform for automating, scheduling and monitoring complex data piplines and workflows.
+
+-> It used DAG(Directed Acyclic Graphs) to represent workflows and web bsed UI to visualize and manage them.
+
+-> It is python based framework and robust integrations allow it to connect with various technologies, making orechestrating data processing.
+
+-> It basically sits in the middle of data processes and orchestrate work happening across distributed systems.
+
+-> Airflow is handle only Bach processor not handle streaming processor
+
+Myth
+----
+-> Airflow is not a data processing tool in itself but orchestrate the different components reponsible for processing the data in pipelines
+
+Key features
+------------
+-> Workflow as Code
+-> DAG
+-> WEB-Based UI
+-> operators
+-> Scheduling
+-> Scalabilty and Flexibility
+
+common use case
+---------------
+-> Data Pipline Orchestration
+-> Machine Learning
+-> Infrastructure Management
+

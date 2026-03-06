@@ -113,7 +113,55 @@ Ex: key-value -> {"id":"1","name":"samarth":"age","25"}
 	----				|		----
 -> Online Analytical Processing		|	-> Online Transaction Processing
 -> only few columns read 		|	-> It is write Insert, Update, delete		
+-> use column based file formate	|	-> use row based file formate
 
+	Data organization in parquet
+	----------------------------
+-> file
+    |->Row group(we have metadata at group level also)
+	|->column
+	    |-> pages(actual data store)
+		|-> metadata
+			|-> min
+			|-> max
+			|-> count
 
+	Optimization
+	------------
+----------------------------------------------------------------------------------
+		How to write data in spark(on disk)
+		-----------------------------------
+1) what are the modes available in dataframe writer?
+2) what is partition by buckeby?
+3) how to write data into multiple partition?
 
+Dataframe writer API general structure
+--------------------------------------
+DataFrameWriter.format()\
+		.option()\
+		.partitionBy()\
+		.bucket by()\
+		.save()
+
+ex: df.Writer.format("csv")\
+		.option("header","true")\
+		.option("mode","overwrite")\
+		.option("path","---------")\
+		.save()
+	    
+modes available in dataframe are
+---------------------------------
+1) Append
+2) Overwrite
+3) error If exits
+4) ignore
+
+----------------------------------------------------------------------------------
+		Partitioning and bucketing
+		--------------------------
+1) what is partitioning in spark?
+2) what is bucketing in spark?
+3) why do we need these two?
+4) when to use partitioning?
+5) when to use bucketing?
 

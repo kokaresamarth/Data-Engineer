@@ -1,0 +1,179 @@
+		====================================
+		module-1 : Software Industry Details
+		===================================
+
+=> We can see 3 types of Companies in IT
+
+1) Product Based Companies : They will develop software & sell in market
+
+	Ex: Apple, Samsung, Dell, Oracle, Amazon, Microsoft etc....
+
+2) Service Based Companies : Develop projects for clients
+
+	Ex: TCS, INfosys, Wipro, Techm, HCL, Deloitte, Capg, CTS etc....
+
+3) Outsourcing Companies : Will supply employees to other companies
+
+=================
+Interview Process
+=================
+
+1) Product Based Companies
+
+	=> Data Structure
+	=> Algorithms
+	=> System Design
+	=> Problem Solving
+	=> Design Patterns
+	=> Coding Test
+
+-> Interview : 5 to 6 rounds
+
+-> Package : 6-7 LPA
+
+Note: No On-site Opportunity
+
+2) Service Based Companies
+
+	=> coding round (Arrays + Strings +Java )
+	=> Hibernets ORM
+	=> Microservices
+	=> Cloud
+	=> Frontend Question
+	=> SPring boot
+
+-> Interview : 2 to 3 rounds
+
+-> Package : 3-4 LPA
+
+Note: On-site Opportunities will be available
+
+======================
+Types of Software Jobs
+======================
+
+1) Permanent Job (More Benefits for employee)
+	
+	=> Health Insurance for family membares
+	=> PF
+	=> Notice Period
+
+2) Contract Job (less benefits)
+
+	=> Health Insurance (may available / may not)
+	=> PF Optional
+	=> Notice Period (15 to 30 days)
+
+=================
+Types of Projects
+=================
+
+1) Scartch Development ------> 10 %
+
+2) Maintence / support project -------> 80 %
+
+	=> Change Request (CR)
+	=> New Enhancement
+	=> Bug Fixing
+
+3) Migration Project -----> 10 %
+
+==============
+Types of Teams
+==============
+
+1) Offshore Team (Development + testing + Operations)
+
+2) Onshore Team (client location - Functional / Business Analyst team)
+
+-> Bridge calls (Zoom / WebEx / Skype Businees /Microsoft Teams)
+
+--> For every meeting we have to prepare MoM.
+
+==================
+Role Structure
+================
+
+Fresher ===> Associate Analyst
+
+1 - 3 exp : Business Analyst 
+
+3 - 6 exp : Consultant / software engineer
+
+6 - 9 exp : Sr. Consultant / Sr. s/w engineer
+
+9 - 12 exp : Tech lead / Team Lead
+
+12 - 26 : Manager
+
+16 - 20 years : Sr. Manager / Architect
+
+20+ : Director
+
+==========================================================================
+
+		=========================
+		Module-2 : Realtime Tools
+		=========================
+
+1) GIT HUB : Version Control Software (To store Progect source code)
+
+	=> Alternate : BitBucket
+
+	=> Integrate code
+	=> Monitor code changes
+
+2) Maven : Build Tool (To automate build process of the application)
+
+	=> Alternate : Gradel
+
+	=> can create project
+	=> Download dependences
+	=> Can compile
+	=> Can execute Junits
+	=> Can package (jar / war)
+3) JIRA : Project management & Bug Reporting
+
+	=> Task Assdinment
+	=> Bug Reporting
+
+4) Log4j : To implement Logging
+
+	=> Store application execution details to a file/console/db
+	=> It helps in understanding exception occured in the project
+5) Splunk : To monitor log message of our application
+
+	=> Alternates : Putty & WinScp
+
+6) Junit & Mocking : Unit testing framework
+
+	=> Tp identify code behaviour
+
+7) Jacocco :Code Coverage
+
+	=> Identify how many line of code is tested in unit testing
+	=> Industry standard is 80%
+
+8) SonarQube : Code Review
+
+	=> Indentify developers mistake in code
+	=> check naming convention
+	=> identity duplicate code
+	=> Identify security issue in code
+
+9) Jenkins : Continuos Integration & Continuous Deployment
+
+	=> to automate deployments
+
+10) Postman : To test REST API functionality
+
+11) Swagger : To generate Documentation for TREST API
+
+12) Apache Kafa : Message Broker
+
+13) Redis Cache : To reduce no. of db call to fetch static data
+
+14) Docker : Containerization
+
+15) Kubernetes (K8S) : Orchestration(management of docker) 
+

@@ -1,0 +1,156 @@
+-> Python is a general purpose, high level, interpreted programming language.
+
+-> Python language was developed by Guido Van Rossum.
+
+-> The first version of python was released in 1991
+
+-> Python is an open source softere
+
+-> official website www.python.org
+
+
+===================		
+Features of Python:
+===================
+
+-> Simple to learn and easy to implement: It is programmer friendly language.
+
+-> Object Oriented Programming language: python supports object oriented feature like classes, objects,
+	Inheritance
+
+-> Platform independent language: we can develope any application using python on one platform and we can
+	runthis python code on any platform
+
+-> expressive language: python code is easly understandable.
+
+===================================
+Python is used in many application:
+===================================
+
+1) GUI applications
+
+2) Web applications
+
+3) Scientific applications
+
+
+			#############
+			PYTHON TOKENS
+			#############
+
+-> tokens: smallest individual units of a program
+
+-> pyhon tokens
+
+	=> Identifiers
+	=> Keywords
+	=> Literals (10.3.8,'python')
+	=> operators
+	=> separators (, : .)
+
+	Ex:  x		   =		10
+	    Identifer    operator 	literal
+
+			===========
+			Identifiers
+			===========
+
+Rulees to define identifiers:
+------------------------------
+
+-> Identifiers may contain letter and digits but can not begin with a digit
+
+-> The underscore character (_) is also allowed to aid in the readability of long identifier name (multiword
+    identifier to connect the word)
+
+-> Identifiers begining with an underscore have special meaning in  python
+
+-> unnamed variables:	
+
+-> space are not are allowed as of an identifier
+
+-> Identifiers are case sensitive
+
+ 			========
+			Keywords
+			========
+
+-> A keywords is a sequence of character that has predefined meaning in a programming language.
+
+-> There are 33 keywords in python language
+
+True	False	None
+and	or	not
+if	elif	else
+while	for	break	continue	return	in
+try	except	finally	raise		assert
+import	from	as	class		def	pass	global	nonlocal	lambda
+del	with	yield
+
+-> The keywords of the python current version can be printed using the folling statrment
+>>> import keyword
+>>> print(keyword.kwlists)
+
+			==========================
+			Basic Data Types In Python
+			==========================
+
+-> There is no need of pre-declation and no need to specify the value's type
+
+x=10
+..
+..
+x=1.4
+..
+..
+x='python'
+
+python basic data types
+------------------------
+-> int
+-> float
+-> complex
+-> bool
+-> str
+
+			===========
+			Expressions
+			===========
+
+Expression: An expression is a valid statement that evaluates to a value or that has some value.
+
+Example:
+10
+7.3
+print('hi')
+
+Airthmetic expressions: collection of operators and operands
+Ex:
+  z=x+y
+  5=2+3
+
+Boolean Expression:
+Ex:
+  x>20
+  10   true
+  30   false
+
+			=========
+			Operators
+			=========
+
+-> An operator is a symbol that represents an operation that may be performed on one or more operands.
+
+Ex:
+  +  -  *  /
+
+Airthmetic operators:
+=====================
+
++	Addition
+-	Subtration
+*	Multiplication
+/	Division
+//	Truncating division
+%	Modulus
+**	Exponentiation

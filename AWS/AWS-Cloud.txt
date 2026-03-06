@@ -9,7 +9,7 @@ Redshift – Data warehouse	(Data Storage)
 
 Athena – Serverless querying	(Data Analytics and Querying)
 
-EMR – Big data processing
+EMR – Big data processing(spark services)
 
 Kinesis – Real-time streaming data	(Data Ingestion)
 
@@ -19,9 +19,9 @@ IAM, CloudWatch, KMS – Security & monitoring	(Security, Governance & Monitorin
 
 Step Functions / Airflow – Orchestration
 
-#######################
+######################
 What is Infrastructure
-#######################
+######################
 
 			=======================
 			### Infrastructure  ###
@@ -98,9 +98,9 @@ What is Cloud computing?
 
 -> Cloud Providers giving infrastrucure bases on 'Pay As You Go'
 
----------------------------
+--------------------------
 Cloud Computing Advantages
----------------------------
+--------------------------
 
 1) Pay As You Go Prising
 
@@ -122,9 +122,9 @@ Note: If we setup infrastructure on our own then it is called as on-premises / i
 -> in-house infrastructure is costly
 -> Managing in-house infrastructure in verey very difficulty
 
------------------
+----------------
 Cloud Providerrs
------------------
+----------------
 
 -> We have serverl cloud providers in market
 
@@ -195,7 +195,7 @@ In India, AWS having one Region i.e Mumbai (code:  ap-south-1)
 ap-south-1a
 ap-south-1b
 ap-south-1c
- 
+
 Note: Each AZ will have 100kms distance
 
 #####################
@@ -262,6 +262,18 @@ Types of IP's in AWS
 2) public IP ( Dynamic IP and it is used access resources outside )
 
 3) Elastic IP ( It is fixed public ip - it is commercial )
+
+-----------------------------------------------------------------------------------------------------------------
+				What is AWS ?
+				=============
+-> AWS is a secure cloud service platform from amazon
+
+-> AWS services can be used to create and deploy any application in cloud
+
+-> It provides services over the internet
+
+-> With AWS, you pay only for what you use
+
 
 -----------------------------------------------------------------------------------------------------------------
 
@@ -481,19 +493,19 @@ Note: WE can increase volume size based on demand
 => If we create Database using RDS then we can directley use that database and we can
    perform operations with Database wihtout bothering about maintence. 
 
-####### Note: Maintence, Management, Security & Backup will be taken care by AWS.
+Note: Maintence, Management, Security & Backup will be taken care by AWS.
 
 Note: RDS is paid service.
 
 => AWS support for serval Relational Databases
 
 	Ex: Oracal, MySQL, postGares, SQL Server, Aurora....
- 
+
 -----------------------------------------------------------------------------------------------------------------
  
-					#######
+					################
 					AWS IAM Services
-					#######
+					################
 
 => Identity and Access management
 
@@ -525,11 +537,11 @@ Note: WE can use Googal Authenticatior app app to provide MFA for root account.
 
 -----------------------------------------------------------------------------------------------------------------
 
-					######
+					###############
 					AWS S3 Services
-					######
+					###############
 
-=> S3 stands for simple storege service
+=> S3 stands for simple storege service 
 
 => We can store unlimited data in using S3 sevices in AWS cloud
 
@@ -549,12 +561,143 @@ Note: WE can use Googal Authenticatior app app to provide MFA for root account.
 	
 	like -> image, video, csv, file 
 
+=> Store almost unlimited data in a single bucket. However one object should not be more than 5TB.
+
+=> S3 provide bucket policies, access control, and encryption settings are appropriately configured.
+
+-------------------------------------------------------------------------------------------------------------------
+					##########
+					AWS LAMBDA
+					##########
+-> Lambda also give comput
+-> Lambda is Serverless computing services.
+
+-> run our code in response to events without managing servers.
+
+-> You just upload your code, and AWS automatically handles the rest, scalling as 
+   needed and only charging for time your code runs.
+
+
 -------------------------------------------------------------------------------------------------------------------
 
-					###############
-					Amazon RedShift Services
-					###############
--> for data WeareHouse
+					########################
+					Amazon RedShift Services	(data WeareHouse)
+					########################
+	What is Redshift?
+	-----------------
+-> Amazon Redshift is a cloud service or a data warehouse services that is used for collecting and storing data.
+
+-> Also, it anables a user to analyze the data using BI tools and simplifies the process of handling large data sets.
+
+-> In this we can run complax quaries againest terabytes and petabytes of structured data and we 
+   will getting result back is just a matter of seconds.
+
+-> Redshift accepts all types of data formates.
+
+-> It is serverless, everything is taken care by AWS.
+
+----------------------------------------------------------------------------------------
+
+=> It follows massively parellel processing system architecture which allows it to distribute 
+   and process large amount of data efficiently.
+
+=> Architecture consists of 3 main components
+==============================================
+1) Client application (BI tools, ETL Script, SQL Quaries & dashboards)
+
+2) The leader node (manage query planning & coordination)
+
+3) Compute node (execute queries & store data)
+
+	Types of compute node:
+	----------------------
+	-> Leader node: It manages quary coordination & optimization,
+			It passes SQL queries & create execution plans, 
+			It sends query steps to compute nodes.
+
+	-> Compute node: They execute queries in parellel, store data in columnar format
+			 return results to the leader node.
+
+	Slices in Computer Nodes
+
+	-> Slices are responsible for processing a subset of the data in parallel.
+ 
+----------------------------------------------------------------------------------
+	Advatages of Amazon Redshift
+	----------------------------
+-> High performance
+-> Low Cost
+-> Scalability
+-> Availability
+-> Security
+-> Flexibility
+-> Simple database migration
+
+	Architecture of Amazon Redshift
+	--------------------------------
+1) Clint application
+---------------------
+	-> Clint applications of Redshift interact with leader-node using JDBD and ODBC.
+
+	-> JDBC(Java DadaBase Connetivity) & ODBC(Open DataBase connectivity)
+
+	-> JDBC -> Redshift service can monitor connection from other applications
+
+	-> ODBC -> ODBC allows a user to intract with live data of Amazon Redshift
+
+2) Leader node
+--------------
+	-> It interaction between the Clint application  & Compute nodes.
+
+	-> It analyses and develops design in order to carry out database operation.
+
+	-> The Leader node runs the program and assigns the code to individual compute nodes.
+
+3) Compute node
+---------------
+	-> Amazon Redshift has a set of computing resources called Compute nodes.
+
+	-> Each compute node is locally divided into a number of Slices.
+
+	-> The group of nodes are called as data warehouse Cluster.
+
+	-> Each cluster has one or more database.
+
+	-> These node slices work in parallel in order to finish there work.
+
+	=> The compute node execute the program and share the result back to the leader node for final aggregation.
+
+There are 2 additional concepts in Redshift
+-------------------------------------------
+1) Column storage
+
+2) Compression
+
+1) Column storage
+-----------------
+-> Column storage is an essential in quary performance and resulting in quicker outputs.
+Ex: table of 3 rows & 3 column
+	col 1 , col 2, col 3 like
+
+
+2) Compression
+---------------
+-> Compression is a column-level operation which decreases storage requirement
+
+-> It eventually improve quary performance
+
+syntax:
+======
+	CREATE TABLE table_name(column_name data_type
+	ENCODE encoding-type)[, ....]
+
+-> Companies using Amazon Redshift are
+-------------------------------------
+-> MacDonald's
+-> PHILIPS
+-> LYA
+-> EQUINOX
+-> Phzer
 
 -------------------------------------------------------------------------------------------------------------------
 
@@ -562,6 +705,16 @@ Note: WE can use Googal Authenticatior app app to provide MFA for root account.
 					Amazon Glue Services
 					############
 -> for data Transformation
+
+	What is AWS Glue ?
+	------------------
+-> AWS Glue is a fully managed ETL service that makes it simple & cost-effective to categorize your data, clean it.
+
+-> AWS Glue is designed to work with semi-structured data.
+
+		Architecture of Amazon Glue
+		---------------------------
+
 
 -------------------------------------------------------------------------------------------------------------------
 

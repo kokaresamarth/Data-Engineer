@@ -158,7 +158,7 @@ What is Database?
 
 -> It's like digital system for organizing and retriving information quickly.
 
-->A DBMS is software that helps create, manage, and interact with database efficiently.
+-> A DBMS is software that helps create, manage, and interact with database efficiently.
 
 ==================
 Types of Database?
@@ -319,8 +319,9 @@ Operators:
 		###############
 -> GROUP BY groups rows that have same values in a column, so you can apply aggregate function on each group.
 
-AGGREGATE FUNCTION
-==================
+		AGGREGATE FUNCTION
+		==================
+
 Function	What it does	Example in Context
 --------	------------	------------------
 COUNT()		Counts rows	How many customers You have
@@ -340,7 +341,8 @@ Note: WHERE filters brfore grouping
 
 
 Concept of JOINS
-=================
+================
+
 Types		What It Does			Real-life analogy
 -----		------------			-----------------
 INNER JOIN	Only matching data from		People who placed orders
@@ -349,8 +351,8 @@ INNER JOIN	Only matching data from		People who placed orders
 LEFT JOIN	All from left table+matches	All customers, ever those with
 		from right			no orders
 
-RIGHT JOIN	All from right+match from	All orders, even if customer
-		left(less common)		details are missing
+RIGHT JOIN	All from right table+match 	All orders, even if customer
+		from left(less common)		details are missing
 
 FULL JOIN	All data from both,matched	Everyone and everything
 		or not

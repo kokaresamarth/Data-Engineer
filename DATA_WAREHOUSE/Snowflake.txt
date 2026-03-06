@@ -1,0 +1,16 @@
+				Snowflake
+				#########
+
+-> Snowflake is a cloud based data analytical data warehouse, which is built on top of AWS.
+
+-> Snowflake provide data warehouse which is Faster, Easier to use, Flexible and vertual unlimited Scalable.
+
+-> Snowflake is public cloud infrastructure  and provide SaaS (do not install manage part of data warehouse)
+
+-> Snowflake is pay per use, zero maintenance, Concurrency(multiple people can run quaries at same time), support SQL.
+
+-> Snowflake support multiple kind of data like Structured, sami-structured, JSON and 
+
+-> Snowflake Features are
+	-> Time Travel
+	-> Zero copy cloning

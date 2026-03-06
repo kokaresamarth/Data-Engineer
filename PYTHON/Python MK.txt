@@ -1,0 +1,250 @@
+Defination
+----------
+-> Python is a high level, interpreted programming Language known for its Dynamic typing, simplicity and versatility.
+
+Variable
+--------
+-> a variable is a name that stores a value so you can use it later in your program.
+
+Data types
+----------
+Data types describe the kind of data a value holds in a programming language like Python.
+
+Data Type	Example
+---------	-------
+int		10
+float		3.14
+str		"Hello"
+bool		True
+list		[1, 2, 3]
+tuple		(1, 2)
+set		{1, 2}
+dict		{"a": 1}
+
+Types of type Casting are
+-------------------------
+1) Explicity Type casting
+-------------------------
+-> As a developer can convert the data types
+
+2) Implicit Type casting
+------------------------
+-> Python only internally convert / python does it's by own
+
+List
+----
+-> List is collection of same / different data type
+
+-> labour = ["sam","manju","abhi","1","2.5","True"].
+
+-> Empty list -> empty_list = []
+
+two types of list indexing
+---------------------------
+1) +ve Indexing
+
+2) -ve Indexing
+-> list is used in API calling
+
+Multi-Dimentitional list
+-----------------------
+-> List inside list is called Multi-Dimentitional list
+
+-> labour = [ ["sam",100],["manju",200] ]
+
+Feature of it
+-------------
+-> It give duplicate value
+-> It is mutable nature
+-> It can store multiple data types
+-> It is a data type / data structure
+
+Split method		***
+------------
+-> hash code = "xyz-abc-51b-986-541-a21"
+
+-> hash_code.split("-")
+-> ['xyz','abc','51b','986',,,,]
+
+Loops in python
+---------------
+1) For loop
+-----------
+		module 1
+		--------
+labour_name = ["Mahesh","Ramesh","Mithilesh","Sumesh"]
+
+Syntax
+------
+	for name in labour_name:
+		print(name)
+
+		module 2
+		--------
+Range method
+------------
+
+-> range(5)
+	|-> 0,1,2,3,4
+
+-> range(5,11)
+	|-> 5,6,7,8,9,10
+
+-> range(5,11,2)
+	|-> 5,7,9
+
+Syntax
+------
+	for i in range(len(length_name)):
+		print(labour_name[i])
+
+	for i in range(4):
+		print(labour_name[0])
+
+2) while loop
+-------------
+-> 
+
+List comprehension in python
+----------------------------
+Syantax when there is only if condition
+---------------------------------------
+	-> new_list_variable_name = [output for loop if condition]
+
+Syantax when there is if and else both condition
+------------------------------------------------
+	-> new_list_variable_name = [output if condition else output for loop]
+
+-> we can use function inside the list comprension too.
+
+-> new_list = [number for number in number list if number%2==0]
+   print(new_list)
+
+		
+		Dictionary in python
+		--------------------
+-> It is used in No-SQL DB(key - value pair), API hit to responce it used
+
+-> Dictionary also called JSON
+-> labour_cost = {"Mahesh":500, "Ramesh":600}
+
+
+-> list and dictionary are most use in DE
+
+		Tuple in python
+		---------------
+-> Tuple is a order and it is Immutable
+
+-> It have duplicate.
+
+Syntax
+------
+	tuple = (1,2,3,1,samarth)
+
+
+		Set in python
+		-------------
+-> Set is un-ordered and it is Immutable.
+
+-> It cannot duplicate.
+
+Snatax
+------
+	set_variable = {1,3,2,4,6,8,5}
+
+Sets in mathematics
+-------------------
+a=(1,2,7,8,9,12)
+b=(2,4,6,5,15)
+
+1) Union
+--------
+-> a u b = {1,7,2,8,12,4,6,5,15}
+
+2) Intersection
+---------------
+-> a b = {2,4}
+
+3) difference
+-------------
+-> a - b = {1,7,8,12}
+
+-> b - a = {6,5,15}
+
+4) Symmetric Difference
+-----------------------
+-> 1,7,5,12,,6,5,15
+
+---------------------------------------------------------------------
+
+		List
+		----
+-> Mutable - yes
+-> ordered - yes
+-> can contain duplicate - yes
+-> Iterable - yes
+
+
+		Dictionary
+		----------
+-> Mutable -> yes
+-> Ordered -> No
+-> Can contain duplicate -> No
+-> Iterable -> yes
+
+		Tuple
+		-----
+-> Mutable - no
+-> ordered - yes
+-> can contain duplicate - yes
+-> Iterable - yes
+
+		Set
+		---
+-> Mutable -> yes
+-> Ordered -> No
+-> Can contain duplicate -> No
+-> Iterable -> yes
+
+============================================================================
+
+		Function in python
+		------------------
+
+=========================================================================
+
+		Exception handling
+		------------------
+
+==========================================================================
+
+		AES Encryption
+		--------------
+
+-> AES => Advanced Encryption Standard
+
+-> convert into plain text to cipher text 
+
+========================================================================
+
+		Database Connection in python
+		-----------------------------
+
+	ORM							Raw SQL query
+	---							-------------
+-> Object Relation Mapping
+
+1) Simple CURD operation				Complx query
+
+2) Database portability is easy with minimum or		Need to update the query according to database
+   modified						compatibility
+
+3) code duplication can be minimised			Code repeatition is high
+
+4) Difficult to write 					Easy to write
+
+5) Debugging  is bit difficult 				Debugging  is easy
+
+6) security is high					Chance of SQL injection
+
+

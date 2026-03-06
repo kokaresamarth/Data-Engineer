@@ -1,6 +1,6 @@
-			=======================
-			Spark Overview(Theory)
-			=======================
+			======================
+			Spark Overview(Theory)				ACID
+			======================
 
 | Level         | Spark Usage | What You Should Know                                 |
 | ------------- | ----------- | ---------------------------------------------------- |
@@ -8,7 +8,50 @@
 | **Mid-Level** | Core        | Build ETL jobs, use PySpark, optimize pipelines      |
 | **Senior**    | Expert      | Tune performance, manage large-scale Spark jobs      |
 
+##############################
+Install PySpark on Windows OS:
+##############################
 
+1) Java Should Installed
+2) Optionally Scala 2.x is installed.
+3) Python 3.x Should be Installed
+4) HADOOP_HOME should setup
+5) Install PySpark
+
+Java Should Installed- Recommended
+==================================
+Why Java is required for Pyspark?
+-> Java not required for PySpark
+-> We are installing Just to runs Spark S/W
+-> Spark S/W developed using Scala Language
+-> Scala is a Java based Language to run any Scala based application we need JVM.
+
+
+############################
+PySpark Program Introduction
+############################
+
+PySpark Programs we can implement in 2 Ways. They are
+
+1) Interactive Mode
+2) Script Mode
+
+1) Interactive Mode
+-------------------
+-> Interactive is a step-by-step development.
+
+-> We use pyspark shell(in cmd) or jupyter notebook for interactive mode.
+
+2) Script Mode
+--------------
+-> First we will python+spark script and then we will run later.
+
+-> We use PyCharm IDE, VSCode, Spider IDE and many more Script mode.
+
+Note
+====
+In Interactive Mode
+	-> Pyapark create SparkContext and SparkSession automatically either variable "sc" and "spark"
 
 
 What is Apache spark?
@@ -58,7 +101,7 @@ Database -> Oracle, Teradata, exadata, MySQL
 	3) variety -> Structure, SemiStructure and Unstructure
 	
 -> ETL -> Extract Transform Load
-   ELT -> Extract Load Transform 
+   ELT -> Extract Load Transform
 
 -> ISSUES
    ------
@@ -117,6 +160,8 @@ Issue
 -> it storing data on disk, it read the data, process it, and then again through a disk  
 
 -> it made data processing is slower
+
+================================================================================================================================
 
 			Apache Spark
 			============
@@ -179,6 +224,28 @@ _________________ <------------------------------------------------------------>
 										    <ass.CHF>
 
 
+                +--------------------------------------+
+                |           CONTROL PLANE              |
+                |--------------------------------------|
+                | Databricks UI (Web Workspace)        |
+                | Cluster Management                   |
+                | Job Scheduler                        |
+                | Unity Catalog (metadata)             |
+                | APIs / Repos / Secrets Manager       |
+                +--------------------------------------+
+                               │
+                               │ (commands / control)
+                               ▼
+                +--------------------------------------+
+                |             DATA PLANE               |
+                |--------------------------------------|
+                | Spark Clusters (Driver + Executors)  |
+                | DBFS (on S3 / ADLS / GCS)            |
+                | Delta Tables / Parquet / CSV Files   |
+                | ETL / Streaming / ML Computations    |
+                | Logs / Shuffle / Temp Data           |
+                +--------------------------------------+
+
 
 -> It follows the Master-slave architecture. it works on concept of clusters.
 
@@ -187,8 +254,29 @@ _________________ <------------------------------------------------------------>
 -> Spark distrubuted the data and compitation across multiple nodes in cluster , allow for parall 
    processing & fast the data.
 
-----------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------
 
+Difference between batch-processing and stream-processing
+=========================================================
+
+	batch-processing				stream-processing
+	----------------				-----------------
+-> data i/p is large datasets,			data i/p is Continuous flow of data, 
+   processes in bulk				processed in real-time
+
+-> Latency(delay) is high			Latency is high
+
+-> use in Historical data analysis,		use in Real-time monitoring, event-
+   report					driven system
+
+-> Tools are Hadoop, Spark(batch mode)		Tools are Kafka, Flink, Streaming
+
+-> Ex: Processing daily sales data		Ex: Monitoring stock price or IoT sensor
+
+-> Fault Tolerance is Easier to manage,		Fault Tolerance is More complex, requried
+   can re-run jobs				checkpointing
+
+-----------------------------------------------------------------------------------------------------------------------------
 		==============
 		Transformation
 		==============
@@ -261,13 +349,16 @@ _________________ <------------------------------------------------------------>
 			RDD
 			====
 
--> RDD stant for Resilient Distributed Dataset
+-> Pyspark Core Programming means RDD Programming.
 
-->Resilient -> In case of failure, recovery / fault tolerance
-->Distributed -> over the cluster / i/p data is stored across all worker nodes
-->Dataset -> actual data / data that we provided
+-> RDD stands for Resilient Distributed Datase
+	->Resilient -> In case of failure, recovery / fault tolerance
+	->Distributed -> over the cluster / i/p data is stored across all worker nodes/multiple data of dataset
+	->Dataset -> actual data / data that we provided/collection of data
 
--> RDD is a immutable
+-> When we create an RDD with data, your data going to divide into multiple partition and distribute across the cluster.
+
+-> RDD is a immutable(Not Changeable)
 
 -> it use Unstructured data.
 
@@ -275,7 +366,7 @@ features of RDD
 ---------------
 -> immutable, Lazy, optimization
 
-1) when we need RDD?
+1) when we need RDD?]
 -> full controll on our data like Unstructure data.
 
 --------------------------------------------------------------------------
@@ -293,7 +384,7 @@ features of RDD
    Stage -> Logical plan transformation
    Task -> actual data perform
 
-2) 
+
 
 ------------------------------------------------------------
 		=======================
@@ -334,3 +425,5 @@ coalesce
 
 3> Broadcast Hash Join (BHJ)
 ----------------------------
+
+

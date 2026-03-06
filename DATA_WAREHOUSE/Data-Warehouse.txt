@@ -1,0 +1,483 @@
+				##############		
+				Data warehouse
+				##############
+
+
+	Data warehouse					DataBase
+	==============					========
+
+-> Store large volume of data			Store small  volume of data
+
+-> Designed for read heavy operation		Designed for write heavy operation
+
+-> High latency(delay)				Low latency
+
+-> De-normalized(Data Redundancy more)		Highly normalized (Redundacy low)
+
+-> Columnor storage				Row based
+
+-> Parallel processing of request		Not optimized for parallel processing
+
+-> OLAP(Online Analytic processing)		OLTP(Online Transaction processing)
+	-> Terabeta					-> MySQL
+	-> Snowflake					-> ORACLE
+	-> Redshift					-> Post gress
+	-> Exadata
+
+-> It store structured data			It store semi, un-structured data
+
+
+				OLAP(Readshift)				OLTP(MySQL, PostgreSQL)
+				---------------				-----------------------
+-> Data type: 		Analytic Data				transactional data
+
+-> Query Pattern: 	Aggregation, Join, Reports		Read/Write-heavy Transactions
+
+-> Storage format: 	Columnar Storage			Row-Based Storage
+
+-> Performance: 	Optimized for Quaries			Optimized for Transaction
+
+
+Rules of Data-warehouse
+=======================
+
+1) Integrated
+
+2) Subject Oriented
+
+3) Time variant
+
+4) Non-volatil
+
+Why do we need Data warehouse ?
+=> 
+
+
+Issues
+======
+-> Data
+-> Performance
+-> Historical
+
+Advantages of Data warehouse
+----------------------------
+
+1) Data driven decision
+
+2) One stop shopping
+
+3) making strategic decision 
+	-> Performance (KPI (Keep performance indicator))
+	-> Customer Behaviour
+
+
+		Data Lake vs Data Warehouse
+		===========================
+
+Problem of Data warehouse
+-------------------------
+-> 3 V's
+-> Structured data only support
+-> Cost is more 
+-> Vertical scaling is only limits not more 
+
+Data Lake
+---------
+-> it is dumping ground
+-> Dumping raw data to the Data Lake
+
+
+	Data Lake					Data Warehouse
+	=========					==============
+
+-> Can store infinitely large volume of data.	Can store a limited data storage.
+
+-> Support Structered, semi, un-structured	only support structured, semi- data.
+    data.
+
+-> Don't required pre-define schema.		Required pre-define schema.
+
+-> ELT						ETL
+
+-> Cost is cheeper.				Higher cost.
+
+-> Schema on read.				Schema on write.
+
+
+		Data Mart
+		=========
+
+-> Data mart is subset of Data-Warehouse.
+
+-> If Data-warehouse is exit then only Data-mart is exit.
+
+
+Charecteristics of Data mart
+============================
+-> High specific subject area
+
+-> Subset of large Data-warehouse(DW) with particular business user and specific data
+
+-> often involves summarized data from DW.
+
+-> More control to business
+
+-> Fast quary performance
+
+-> protect departmental data.
+
+
+Types of data mart(DM)
+==================
+
+1) Dependent DM
+----------------
+-> If Data-warehouse is exit then only Data-mart is exit.
+
+2) In-dependent DM
+------------------
+-> Without Data-warehouse Data-mart is exit.
+
+ 
+Dependent Data-mart		Independent Data-mart
+===================		=====================
+
+-> many sources 		Few sources
+
+-> ETL form sources		ETL from sources
+
+-> Large volume of data		samll to medium volume of data
+
+-> Dimensionally organised	Dimensionally organised
+
+============================================================================
+
+		Data Warehouse Internals
+		========================
+
+		ETL(Extract Transformation Load)
+
+Extract
+=======
+
+	Types of staging layer 
+	----------------------
+1) Persistent staging layer.
+2) Non-persistengt staging layer.
+
+
+1) Persistent staging layer
+---------------------------
+Advantages
+----------
+-> Can build user acces layer without sources system.
+-> Data QA can be directly done from staging layer.
+
+Disadavantages
+--------------
+-> More storage required.
+-> Risk of data security / governance.
+
+2) Non-persistengt staging layer
+--------------------------------
+Advantages
+----------
+-> Less storage required.
+-> Less or no security consern.
+
+Disadavantages
+--------------
+-> Need to go back to source system in case of dataware corrupt record.
+-> Data QA need to be done from source system.
+
+----------------------------------------------------------------------------
+
+		ETL
+Transformation 
+==============
+In transformation 2 main purpose
+1) uniformity
+2) Re-structuring
+
+Common transformation 
+----------------------
+
+1) Data value unification 
+2) Data type and size unification
+2) De-deplication
+4) Dropping columns
+5) Dropping Records
+6) Common known errors
+
+-------------------------------------------------------------------------------------
+		
+		ETL
+		===
+Load
+----
+
+Types of Load
+-------------
+1) Initial load
+2) Increment Load      (**)
+
+1) Initial load
+----------------
+-> Done only once
+-> Before going line
+
+2) Increment Load
+-----------------
+-> New Data: Customer product
+-> Modified data: price change, emp promotion
+-> Delete data: Emp resignid
+
+Types of Increment Load
+-----------------------
+1) Appand
+2) In-place update
+3) Complete Replacement
+4) Rolling oppend
+
+	ETL				ELT
+	---				---
+-> Before loading		After loading
+
+-> Traditional data warehouse	Cloud-based platform, data takes
+
+-> Slower for large datasets	Faster for big data porcessing
+
+-> Financial reporting		Real-time analytics
+
+===========================================================================
+
+		Dimensional Modelling
+		=====================
+
+1) What is fact table?
+2) What is dimension table?
+				
+End Goal
+--------
+-> Analyze which product are selling in which store on which 
+   day under what promotion activity ?
+
+
+1) fact table
+   -> Measurement (only numerical number)
+   -> Salary
+
+2) dimension table
+   -> Context
+   -> Time dimension 
+
+--------------------------------------------------------------
+
+How to select gact table and its columns
+----------------------------------------
+
+four steps of Dimensional design process:
+-----------------------------------------
+1) Select the business
+----------------------
+-> what does your businees do?
+-> what measurement you want to analysze?
+-> how does your current operational dataset look like?
+
+end Goal
+--------
+We want to know which product are selling in which store an
+which day under what promotional activity.
+
+2) Declare the grain 
+---------------------
+Grain means the level of details availablewith the fact table. 
+Basically this means what a signal record in fact table show
+
+3) Identify the dimensions
+--------------------------
+-> who, what, when, where, how
+-> promotion, data, store, product
+
+4) Identify the fact
+---------------------
+Derived fact
+
+--------------------------------------------------------------------
+
+Types of facts in fact table
+----------------------------
+1) What is additive?
+2) what is semi-additive fact?
+3) what is non-additive fact?
+
+Type of facts
+-------------
+1) additive fact (add / sum)
+2) non-additive fact
+3) semi additive fact
+
+1) additive fact
+-----------------
+Can add the fact along any dimension
+
+2) non-additive fact
+--------------------
+can't add the fact along any dimension
+
+3) semi additive fact
+---------------------
+can add along some dimension but not all
+
+---------------------------------------------------------
+
+1) what are the type of fact table ?
+2) why do we need accumulatying snapshot table?
+3) what are challanges with periodic snapshot table?
+
+Types of fact table
+--------------------
+1) Transaction fact table 
+2) periodic snapshot fact table
+3) Accumulating snapshot fact table
+
+1) Transaction fact table 
+-------------------------
+-> Billion / trillions of rows / fact
+-> 1 record per transaction
+
+2) periodic snapshot fact table
+-------------------------------
+
+3) Accumulating snapshot fact table
+-----------------------------------
+-> where wehave a fix start and fix end
+
+  Ex: order, warehouse order, Inventory order
+
+-------------------------------------------------------
+
+Factless fact table
+===================
+
+-> fact table is measurement and context table dimension
+
+-> factless fact table is with-out fact table is called factless fact table
+
+---------------------------------------------------------------------------------
+
+Date Dimension table
+====================
+1) what is date dimension table?
+2) why do we need date-dim table?
+3) what should be the frequency of records in date-dim table?
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+	product dim-table
+	-----------------
+
+---------------------------------------------------------------------------------------
+
+	Types of dimensions
+	-------------------
+1) Conformed dimensions
+2) Role playing dimensions
+3) Junk dimensions
+4) Slowly changing dimensions(SCD)
+
+1) Conformed dimensions
+-----------------------
+ Advantages
+ ----------
+	-> multiple copies
+	-> same column
+	-> No mistake
+
+2) Role playing dimensions
+--------------------------
+-> same dimension table multiple role playing
+
+3) Junk dimensions
+------------------
+
+4) Slowly changing dimensions(SCD)
+----------------------------------
+
+Types of SCD
+------------
+1) SCD 0
+--------
+-> Remain original and never change (ex: DOJ)
+
+2) SCD 1
+--------
+-> Overwrite / Inplace update
+-> No historical record
+
+3) SCD 2
+--------
+-> history will be returned
+-> difficult to implement
+
+4) SCD 3
+--------
+-> Salesforce condition
+-> New column introduce
+
+5) SCD 4/5/6/7
+
+==========================################============================
+
+	Star Schema and Snowflake Schema
+	--------------------------------
+1) what is star scahema?
+2) what is snowflake schema?
+3) what is normalization?
+4) what is de-normalization?
+5) Advantage of star schema over snowflake schema & vice versa?
+
+
+	Star schema				Snowflake schema
+	-----------				----------------
+-> It take more storage to keep		It take less space then the star schema
+   the same information
+
+-> It takes less time in the quary	It take more time in the quary execution
+   execution
+
+-> De-normalizd Data			Normalized & De-normalized both data
+
+-> Simple design to implement		Complex design to implement
+
+-> High data Redundancy			Low or no data redundacey
+
+-> less no of join required		More number of join required
+
+--------------------------------------------------------------------------------------------
+
+	Primary key and foreign key
+	---------------------------
+
+1) what is primary key?
+2) what is foreign key?
+3) Features of primary and foreign key?
+4) what is composit key?
+5) what is natural / business key?
+6) What is surragate key / fact less key?
+
+Features of primary key
+-----------------------
+-> It can not be null
+-> It can not be dublicate
+-> It can't be empty
+-> In case table we can have just one Primary key
+-> Primary key can be numeric or alpha numeric
+
+Features of foreign key
+-----------------------
+-> foreign key can have null values
+-> It can have duplicate values
+-> It is a foreign key of some other table
+-> It is used for established the relationship between tables
+

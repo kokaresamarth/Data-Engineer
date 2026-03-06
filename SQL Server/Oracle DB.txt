@@ -71,5 +71,5 @@ Rules of create a table
 -> The maximum length of table is 30 character long
 -> A table contain maximum 1000 Columns and Unlimiyted rows
 -> The attribute name of table must be unique
--> The name of table can be define by the help of alphabet it it could be in 
+-> The name of table can be define by the help of alphabet it it could be in
    upper case or  lower case digits & 3- special sumbols(-,#,$)

@@ -1,5 +1,5 @@
 	==========
-	Linux OS ?	
+	Linux OS ?
 	==========
 
 => It is free
@@ -24,7 +24,7 @@ Linux History ?
 
 -> unix Team did not accept Linux  Torvalds suggesion.
 
--> Linux Torvalds developed hos own Operating System by using Minux OS.
+-> Linux Torvalds developed his own Operating System by using Minux OS.
 
 		( Li ) nus + Mi ( nux ) ==> Linux OS
 

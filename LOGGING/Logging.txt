@@ -1,0 +1,66 @@
+		========
+		Logging
+		========
+
+-> The process of storeing executition deatils to a file is called as Logging.
+
+-> with log messages we can understand executition flow of the application.
+
+-> We can understand executition occuring in the project by seeing log messages.
+
+
+=> We need to implement Logging in the project 
+=> To implement Logging we have several logging frameworks
+	-> Log4J
+	-> Log4J2
+	-> Logback
+	-> LogStash ...
+
+=> When executition occured in the project, we need to monitir log messages and we need
+   to troubleshoot the problem the fix the problem.
+
+=> To monitor log message we will use several tool
+
+	-> putty
+	-> Winscp
+	-> Elk Stqack
+	-> Splunk(commercial)
+
+Logging Architecture
+----------------------
+
+1) Logger : This class providing method to generate log message
+
+2) Layout : It represent log message structure (formate of log msg)
+
+3) Appender : It is used to write log message to destination
+
+4) Destiation : It can be console/file/database.
+
+Note: We eill use files to store our log messages.
+
+==============
+Logging Levels
+==============
+
+1) TRACE
+2) DEBUG
+3) INFO (Default logging level in spring boot)
+4) WARN 
+5) ERROR 
+6) FATAL
+
+===================
+Log level Hierarchy
+===================
+
+TRACE > DEBUG > INFO > WARN > ERROR > FATAL
+
+=> When we set one Log level, application will print log messages from that 
+   level to all higher level messages.
+=> In Spring Boot by default it will use ConsoleAppender
+=> To generate log msgs in lod file we have set below property in
+   application.properties file
+
+
+

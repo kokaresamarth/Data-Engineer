@@ -1,0 +1,182 @@
+
+Data Replication
+================
+-> It is used in master slave archetecture
+-> Replic means copy
+-> Replication is a createing copies of data
+-> inserting data into database, but in any distributed cluster you go,
+   the data will be get inserted in as a multiple copies because,
+   if one particular node goes down you can get data from the remaining nodes/submissions.
+-> In modern technologies itself take care of creating replica store it in multiple nodes all
+   what I need to do is adding in hard disk.
+-> Data replication is the process of creating and maintaining multiple copies of the same data at different locations.
+	Ex: Your file is stored on multiple servers, If one server fails, your file is still safe
+
+Types of Data Replication
+-------------------------
+	1) Synchronous Replication
+	--------------------------
+	Data is copied immediately
+	All copies are always the same
+	Example: Banking systems
+
+	2) Asynchronous Replication
+	---------------------------
+	Data is copied after some time
+	Temporary differences may exist
+	Example: Social media databases
+
+
+Data Consistency
+================
+-> All the users are not getting the same information from the application because, the consistency is going down,
+   the reason is replication you have so many copies of data,
+-> The database will take time to do the updates on all the copies, so unfortunately your request has been went to the database and getting the old data.
+-> Data consistency ensures that when data is updated in one place, it is updated correctly and uniformly in all related places.
+	Ex: Bank balance
+
+Types of Data Consistency (Simple)
+----------------------------------
+	1) Strong Consistency
+	---------------------
+	Data is updated everywhere immediately
+	Example: Bank transactions
+
+	2) Eventual Consistency
+	-----------------------
+	Data updates slowly but becomes consistent after some time
+	Example: Social media likes count
+ 
+
+Data Upsert
+===========
+-> Upsert is a combination of Insert and Update. and Upsert → Insert OR Update automatically.
+-> Data upsert is a database operation that inserts a new record if it does not exist, or updates it if it already exists.
+use of Upsert
+-------------
+-> Avoids duplicate records
+-> Saves time (no need to check insert/update separately)
+-> Maintains data consistency
+-> Useful in data synchronization and replication
+
+
+Polyglot Persistence
+====================
+-> A single application will use more then one data store(database) to the data.
+-> One database cannot handle everything efficiently, so multiple databases are used together.
+Ex: Social media app:
+    -----------------
+	Posts → NoSQL database
+	Users → SQL database
+	Friend connections → Graph database
+
+
+Master-slave vs Peer-to-peer Architecture
+=============  ==========================
+These are two system architectures used in databases and distributed systems.
+1) Master-slave
+---------------
+-> Master–Slave architecture is a system where one master node controls data updates and slave nodes replicate the data.
+How It Works
+------------
+-> Master handles write operations
+-> Slaves handle read operations
+-> Data is copied from master to slaves
+Ex: Bank database:
+    --------------
+	-> Master → updates account balances
+	-> Slaves → show balances to users
+
+2) Peer-to-peer
+---------------
+-> Peer-to-Peer architecture is a system where all nodes have equal roles and share data directly.
+How It Works
+------------
+-> No central controller
+-> Nodes communicate directly
+-> Data is shared among peers
+	Ex: File-sharing networks
+	    Distributed databases like Cassandra
+
+Messaging Queue
+===============
+-> A Message Queue is a way for different parts of a software system to send messages to each other without needing to run at the same time.
+How it works
+------------
+-> Producer sends a message (data or task)
+-> Queue stores the message safely
+-> Consumer reads and processes the message
+-> Message is removed after processing
+
+Massive Parallel Processing(MPP)
+================================
+-> MPP is a process massive amounts of data quickly and efficiently, which would be impractical or impossible on a single machine.
+-> Instead of one powerful computer doing all the work, MPP splits the job into many smaller tasks and runs them simultaneously on many computers.
+How MPP works (example)
+-----------------------
+-> Imagine analyzing a huge dataset:
+-> The data is split across multiple nodes
+-> Each node processes its own chunk of data
+-> Results are combined to produce the final answer
+-> This makes MPP extremely fast for large-scale workloads.
+
+
+Stream Data Processing
+======================
+i/p-->Appln---->processor----->DB
+      -----     ---------      ---
+-> Stream Processer is a real-time processing / live data processing.
+-> Stream processing is like watching a live video:
+	Ex: Debit card/ATM transaction
+
+How stream processing works
+----------------------------
+-> Data is generated continuously
+	Ex: sensor data, app events, clicks, messages
+-> Data flows as a stream
+-> Processing happens immediately
+	Filtering
+	Aggregation
+	Alerts
+-> Results are produced in near real-time
+
+
+Batch Data Processing
+=====================
+i/p-->Appln---->DB----->processor
+      -----     ---	---------
+-> It is processing large amounts of data all at once, after the data has been collected and stored over a period of time
+How batch data processing works
+-------------------------------
+-> Data is collected from multiple sources
+-> Data is stored (files, databases, data lakes)
+-> Processing runs on a schedule (hourly, daily, weekly)
+-> Results are saved or reported
+
+
+Programming topics for Data Engineer
+====================================
+1) Architecture
+2) Access Modifiers & specifiers
+3) OOPs
+4) Exception Handleing
+5) String handling
+6) File Handling
+7) Collections (map,set,list)
+8) Methods
+9) Functional programming
+10) JDBC Connectivity
+
+
+Big Data Interview question 
+===========================
+1) Partition vs Bucket(when to use it)
+2) what is the default partition algorithm name used in Mapreduce and Spark
+3) Bucket internal formula
+4) List of file formates/storage formate used in hive? (NR)
+5) HIVE ACID concept  (NR)
+6) Repartition vs Coulase
+7) senario based 2 bolck in HDFS and run spark prg -> how many input task count will be created if input is 22 bloct from hdfs?  (NR)
+8) output task willbe create  (NR)
+9) write Spark word count prg
+10) write prg using spark sql to join two tables or two files?
