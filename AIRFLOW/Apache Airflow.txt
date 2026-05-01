@@ -9,9 +9,16 @@ History
 -> It is open source project under the Apache Software Foundation, with a large and active
    community contributing to its development and providing support.
 
+Issues
+======
+-> Daily morning 6am
+-> pipeline dependence
+-> All jobs are done -> last job
+-> As soon as file arrive
+
 What is Apache Airflow
 ----------------------
--> It is a batch oriented framework for managing, data piplines and scheduling it
+-> It is a batch oriented framework(Bunch of Libraries) for managing, data piplines and scheduling it
 
 -> Apache Airflow is an open-source workflow management platform for automating, scheduling and monitoring complex data piplines and workflows.
 

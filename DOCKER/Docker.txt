@@ -1,0 +1,38 @@
+		######
+		DOCKER
+		######
+
+
+-> Docker is a containerization software
+
+-> Docker is used to simplify our application deployment process
+
+-> Using Docker we can run our application in any platform.
+
+
+1) Dockeer file -> it contain instruction to create a Docker Image
+
+2) Docker Image -> It contains application code + required dependencies and we can store in Docker Hub
+
+3) Docker Hub (Docker registry)
+
+4) Docker Container
+
+=> Docker contain instruction to create a Docker Image
+
+=> Docker contains application code + required dependencies    and we can store in Docker Hub
+
+Note : In realtime , we will use ECR to store docker image
+
+	(ECR -> Elastic Container Registry)
+
+=> Docker Image are used to create Docker Conainers
+
+=> Our application will execute inside Docker Container.
+
+Note: To work with Docker we need to install Docker software (Docker Engine)
+
+############
+Docker Setup
+############
+

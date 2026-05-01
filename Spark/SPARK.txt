@@ -1,4 +1,4 @@
-WHAT IS SPARK ? 
+WHAT IS SPARK ?
 ###############
 -> It is general purpose in memory computation engine.
 
@@ -9,7 +9,7 @@ Quary - HIVE
 ML operation - MAHOUT
 
 -> Spark is a each and every operation we can perform or do in spark itself
-   
+
    data cleaning
    SQL
    Spark MLLIB

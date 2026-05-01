@@ -1,0 +1,148 @@
+		=======		
+		Git Hub
+		=======
+ 
+-> Version Control Software(To store project source code)
+
+=========================
+Version Control Softwares
+=========================
+
+1) Code Integration at plase
+
+2) Monitoring Code Changes
+
+------------------------------
+1) SVN (outdated)
+
+2) Git HUB --- Microsoft
+
+3) BitBucket --- Atalasian
+
+================
+Git Repository :
+================
+
+=> It is a place which is used to store project source code at one place.
+
+1) Public Repository (everybody can see, we choose who can commit)
+
+2) Private Repository (nobody can see, we choose who can see & commit)
+
+Note: For every repository , repo URL will be generate.
+-----
+
+==================
+Environment Setup
+==================
+1) Create Github Account (free)
+
+2) Generate GIT Token to perform operation in github repo
+
+	Token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+3) Download and install git client s/w
+
+4) Open GitBash & Configure your details in git client
+
+	$ git config --global user.name "samarth"
+	$ git config --global user.email "kokaresamarth0@gmail.com"
+	
+$ git help
+
+$ git help commit
+
+$ git help init
+
+================pushing project to Git Repo==================
+
+1) Create Git Remote Repo
+
+2) Open Git Bash from Project Folder
+
+3) Execute below commands
+
+$ git init
+$ git status 
+$ git add .
+$ git status
+$ git commit -m 'initial msg'
+$ git branch -M main
+$ git remote add origin <repo-url>
+$ git push -u origin main
+
+$ git clone <url>	(For git-repo to system )
+
+===============================================================
+ 	
+$ git help --> It provide frequentley used several git commands
+$ git config
+$ git init  --> It is used to create empty repository or re-initialize exsting repo 
+$ git add
+$ git status --> This command will display status of current repository
+$ git remote add 
+$ git push  (changes full)
+$ git clone
+$ git restore
+$ git log
+$ git rm (after git rm then we need to commit + push)
+$ git revert 
+$ git pull  (latest changes)
+
+=======================================================
+
+============
+Git Branches
+============
+
+-> In project multiple development teams will be involved
+
+	-> CR Team
+	-> Enhancement team	
+	-> R & D Team
+	-> Prod team
+
+-> When multiple teams are working parelelly code integration will be difficult.
+
+-> Every team should have separate code base for easy maintenence
+
+Note: Under one repository multiple branches will be created
+
+=> using branches multiple teams can work paralelly.
+
+=> we can create branches from git repository directly.
+
+=> In every repository below branches will be available
+	1) main / master
+	2) develop
+	3) feature-101
+	4) research
+	5) staging
+	6) release
+
+-> we clone git repo using 'git clone' commad (it will clone default branch) 
+
+-> using git bash we can switch from one branch to another 
+	
+	$ git checkout <branch-name>
+
+-> we can clon particular branch code also
+ 
+ 	$ git -b <branch-name> <repo-url>
+
+-> we can check working tree pointing to which branch
+
+	$ git branch
+
+-> we can merge chenges from one branch to another branch using pull request.
+	
+-----------------------------------------------------------------
+1) git clone vs git pull
+2) git push vs git pull
+3) git stash
+4) git fetch vs git pull
+5) git merge vs git rebase
+	
+what is Tagging ? 
+
+-> tag is used to mark the code / version

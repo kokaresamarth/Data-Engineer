@@ -30,7 +30,7 @@ Types of Data Replication
 Data Consistency
 ================
 -> All the users are not getting the same information from the application because, the consistency is going down,
-   the reason is replication you have so many copies of data,
+   the reason is replication you have so many copies of data.
 -> The database will take time to do the updates on all the copies, so unfortunately your request has been went to the database and getting the old data.
 -> Data consistency ensures that when data is updated in one place, it is updated correctly and uniformly in all related places.
 	Ex: Bank balance

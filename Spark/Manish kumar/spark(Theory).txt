@@ -157,7 +157,7 @@ for Distrubuted Apporach
 
 Issue
 -----
--> it storing data on disk, it read the data, process it, and then again through a disk  
+-> it storing data on disk, it read the data, process it, and then again through a disk
 
 -> it made data processing is slower
 
