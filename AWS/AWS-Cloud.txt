@@ -320,7 +320,7 @@ Note: With AWS Free tier account 1st one year EC2 instance are free (Monthly 750
 
   -> Note: One Security Group we can use for Mutiple EC2 instance
 
-8) Types of IP's ()Public ip, private ip and elastic ip
+8) Types of IP's (Public ip, private ip and elastic ip)
 
 
 ==================
@@ -715,6 +715,34 @@ syntax:
 		Architecture of Amazon Glue
 		---------------------------
 
+-------------------------------------------------------------------------------------------------------------------
+
+					########################
+					Amazon Route 53 Services
+					########################
+=> DNS mapping	 (Domain Name Services)
+
+=> We can map application url to domain name using Route 53
+
+	ex: www.gmail.com, www.facebook.com, www.ies.com
+
+Local URL : file://E:\SAMARTH\VIDEOS\JRTP VIDEOS
+
+S3 Endpoint URL : http://iesapp.link.s3-website.ap-south-1.amazonaws.com/
+
+==============
+DOMAIN Mapping
+==============
+
+1) Check Domain Availability
+
+2) Register Domain  ( Min : 1 year & Max : 10 years )
+
+3) Pay Bill Amount to  activate domain
+
+Note: After payment, it will take 2 to 3 hours to get activated
+
+4) Create Record to map domain to application URL
 
 -------------------------------------------------------------------------------------------------------------------
 

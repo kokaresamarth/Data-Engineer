@@ -1,0 +1,47 @@
+1) Data Sources Layer
+-> MySQL, PostgreSQL, MongoDB, REST APIs, Kafka producer, IoT devices
+
+2) Data Ingestion Layer
+-> Apache Kafka, Apache Flume, Apache NiFi, AWS Kinesis, Googal Pub/Sub
+
+3) Data Validation Layer
+-> Great Expectations, Deequ, Apache Griffin
+
+4) Data SStotrage Layer
+-> HDFS, Amazon S3, Googal Cloud Storage, Azure Data Lake, HBase
+
+5) Data Processing Layer
+-> Apavhe Spark, Apache Flink, Hadoop MapReduce, dataproc
+
+6) Data Transformation Layer
+-> dbt, Apache Spark (SQL), Hive
+
+7) Data Orhestration Layer
+-> Apache Airflow, Luigi, Prefect
+
+8) Data Scheduling Layer
+-> Apache Airflow (Schedular),m Cron Jobs
+
+9) data Pipeline Layer
+-> Apache Beam, Apache Airflow, Kafka Streams
+
+10) Data Visualization Layer
+-> Tableau, Power BI, Apache Supesrt, Looker
+
+11) Data Governance Layer
+-> Apache Ranger, Apache Knox, IAM(AWS/GCP/Azure)
+
+12) Data Governance Layer
+-> Apache Atlas, Collibra, AWS Glue Data Catalog
+
+13) Metadata Management Layer
+-> Apache Atlas, Hive Metastore, AWS Glue Catalog
+
+14) Data Lineage Layer
+-> Apache Atlas, OpenLineage, DataHub
+
+15) Data Monitorin g Layer
+-> Prometheus, Grafana, Datadog, Monte Carlo
+
+16) Machine Learning Layer
+-> TensorFlow, PyTorch, Spark MLlib, SageMaker

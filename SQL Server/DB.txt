@@ -17,3 +17,17 @@ password: Sam@8123
 
 ====================================================================
 
+
+connection b/w jupyter notebook to ssms sql server
+==================================================
+
+Jupyter Notebook
+      ↓
+Load Data (df)
+      ↓
+Connect SQL Server
+      ↓
+Create customer table
+      ↓
+Load Data
+

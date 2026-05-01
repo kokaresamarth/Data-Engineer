@@ -47,7 +47,7 @@ Rules of Data-warehouse
 
 3) Time variant
 
-4) Non-volatil
+4) Non-volatil  (Data is not changed frequently)
 
 Why do we need Data warehouse ?
 => 
@@ -273,7 +273,7 @@ End Goal
 
 --------------------------------------------------------------
 
-How to select gact table and its columns
+How to select fact table and its columns
 ----------------------------------------
 
 four steps of Dimensional design process:

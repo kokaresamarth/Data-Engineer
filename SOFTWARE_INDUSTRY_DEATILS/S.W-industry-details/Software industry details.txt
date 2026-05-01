@@ -90,9 +90,9 @@ Types of Teams
 
 --> For every meeting we have to prepare MoM.
 
-==================
+==============
 Role Structure
-================
+==============
 
 Fresher ===> Associate Analyst
 
@@ -116,7 +116,7 @@ Fresher ===> Associate Analyst
 		Module-2 : Realtime Tools
 		=========================
 
-1) GIT HUB : Version Control Software (To store Progect source code)
+1) GIT HUB : Version Control Software (To store Project source code)
 
 	=> Alternate : BitBucket
 

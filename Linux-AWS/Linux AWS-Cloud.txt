@@ -8,6 +8,8 @@
 
 => Linux Multi User Operating System
 
+3.+
+
 => Linux is Highly recommed OS to run Server and Database...
 
 => Linux is recommended for Business Purpose
@@ -30,7 +32,7 @@ Linux History ?
 
 -> Linus Torvalds released Linux OS into market with free of cost along with source  code.
 
--> so many companies taken Linux OS source code and modified according to there requirement and 
+-> so many companies taken Linux OS source code and modified according to there requirement and
    released into market with different names those are called as Linux Distribtions.
 
 		1) Ubuntu Linux
@@ -135,7 +137,7 @@ chmod    : To change file permissions
 
 chown    : To change file ownership
 	
-check ver: java -version 
+check ver: java -version
 
 Install  : sudo yum install java     
 
@@ -153,15 +155,6 @@ How to install softwares in Linux OS
 
 -> Linux OS provided Package Manager to install any software
 
-Amazon Linux / Red hat : yum (sudo yum instakll java)
+Amazon Linux / Red hat : yum (sudo yum install java)
 
-Ubuntu / Debin : apt  (sudo apt install java) 
-
-
-
-
-
-
-
-
-  
+Ubuntu / Debin : apt  (sudo apt install java)
