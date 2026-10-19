@@ -357,5 +357,3 @@ RIGHT JOIN	All from right table+match 	All orders, even if customer
 FULL JOIN	All data from both,matched	Everyone and everything
 		or not
 
-
-Joins samarth

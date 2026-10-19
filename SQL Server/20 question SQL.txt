@@ -1,0 +1,76 @@
+Assumed tables (used across questions):
+=======================================
+-> employees(emp_id, name, dept_id, manager_id, salary, hire_date)
+-> departments(dept_id, dept_name)
+-> customers(customer_id, name, signup_date)
+-> orders(order_id, customer_id, product_id, order_date, amount)
+-> products(product_id, category, price)
+-> logins(user_id, login_date)
+-> events(user_id, event_time, event_type)
+
+Level 1: Easy (Fundamentals)
+============================
+1) Find the second highest salary from employees.
+=> employees
+
+emp_id	name	salary
+------  ----    ------
+1	Asha	90000
+2	Ben	80000
+3	Chitra	80000
+4	Dev	60000
+
+Select max(salary)
+from employees
+where salary < (select max(salary) from employees);
+
+=> OUTPUT -> 80000
+
+2) Find duplicate records (e.g., duplicate names or emails) in a table.
+=> employees
+
+emp_id	name	dept_id
+------  ----    -------
+1	Asha	10
+2	Ben	10
+3	Asha	10
+4	Ben	20
+
+-> Find duplicates based on name and dept_id
+--------------------------------------------
+select name, dept_id, count(*) as duplicate
+from employees
+group by name, dept_id
+having count(*) > 1;
+
+=> OUTPUT
+name	dept_id		duplicate
+Asha	10		2
+
+-> If duplicate names only then
+-------------------------------
+select name, count(*) as duplicate
+from employees
+group by name
+having count(*) > 1;
+
+=> OUTPUT 
+name	duplicate
+Asha	2
+Ben	2
+
+---+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+-+-+-+-++-+-+-+--+-+-+-+-+-+-+-+-++--+
+JOINS 
+=====
+--- Fetch the employee name and the department name they belongs to ---
+
+-- Inner JOIN / JOIN 
+-> it will try to fetch only those records which are prestent in both the tables
+
+select e.emp_name, d.dept_name 
+from employee e INNER JOIN department d ON e.dept_id = d.dept_id;
+
+
+
+3) List all departments with their employee count, including departments with zero employees.
+=> 
