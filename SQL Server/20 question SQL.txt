@@ -9,6 +9,7 @@ Assumed tables (used across questions):
 -> events(user_id, event_time, event_type)
 -> manager(manager_id, manager_name, dept_id)
 -> project(Project_id, Project_name, emp_id)
+-> Family(member_id, name, age, parent_id)
 
 Level 1: Easy (Fundamentals)
 ============================
@@ -104,6 +105,35 @@ from employee e
 FULL JOIN depatment d ON e.dept_name = d.dept_name;
 
 --- full join = Inner join + all remaining records from Left table + all remaining record from Right table
+
+5) CROSS JOIN
+### CROSS JOIN retirns cartesion product. it give 6*4=24
+
+select e.emp_name, d.dept_name
+from employee e		--6
+CROSS JOIN department d;	--4
+
+### write quary to fetch the employee name and their corresponding department name, Also make sure to display the complany name and the company location corresponding to each employee
+
+select e.emp_name, d.dept_name, c.company_name, c.location
+from employee e
+INNER JOIN department d ON e.dept_id = d.dept_id
+CROSS JOIN company c;
+
+6) NATURAL JOIN 
+
+select e.emp_name, d.dept_name
+from employee e 
+NATURAL JOIN department d;
+
+7) SELF JOIN 
+
+### write a quary to fetch the child name and their age corresponding to their parent name and parent id
+
+select child.name as child_name, child.age as child_age, 
+parent.name as parent_name, parent.age as parent_age
+from family as child
+JOIN family as parent ON child.parent_id = parent.member_id;
 
 3) List all departments with their employee count, including departments with zero employees.
 => 
