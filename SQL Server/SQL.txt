@@ -445,3 +445,32 @@ JOIN family as parent ON child.parent_id = parent.member_id;
 select * from employee;
 select * from department;
 
+### Find the employee who's salary is more than the average salary earned by all employees.
+
+select avg(salary)
+from employee;
+
+select *   --- outer/main quary
+from employee
+where salary > (select avf(salary)from employee);		--- inner/subquary
+
+Types of SUBQUERY
+=================
+1) Scalar Subquary
+2) Multiple row Subquary
+3) Correlated Subquary
+
+1) Scalar Subquary
+------------------
+-> It always returns 1 row and 1 column
+
+select *
+from employee e
+join (selectavg(salary) sal from employee) avg_sal on e.salary > avg_sal.sal;
+
+2) Multiple row Subquary
+------------------------
+
+
+3) Correlated Subquary
+----------------------
