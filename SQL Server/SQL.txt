@@ -204,14 +204,12 @@ What is SQL?
 ------
 -> This are deals with objects of database like table, view, sequence etc..
 -> Create, Drop, Alter, Truncate
-	   ----	 -----  --------
  	-> Truncate -> (All the row will delete from the table but structure is preserved)
 	-> Drop -> (It will delete everthing / table)
 
 2) DML
 ------
 -> Insert, Update, Delete
-	   ------  ------
 	-> Delete -> (Delete row wise)
 
 3) DCL
@@ -230,24 +228,24 @@ What is SQL?
 
 		DataTypes
 		=========
-        Data Type		What it store			Example	
-	---------		--------------			---------
-1) 	INT		Whole nor (e.g., 1, 100, -50)		storing age, quantity
-2)	BIGINT		Very large Whole nor			Tracking large ID's or counts
-3)	TINYINT		Small nor (0 to 255)			Status flags, rating out of 10
+    Data Type			What it store					Example	
+	---------			--------------					---------
+1) 	INT				Whole nor (e.g., 1, 100, -50)		storing age, quantity
+2)	BIGINT			Very large Whole nor				Tracking large ID's or counts
+3)	TINYINT			Small nor (0 to 255)				Status flags, rating out of 10
 
-4)	BIT		0 or 1(used for Yes/No or T/F)		IsActive, IsDeleted
+4)	BIT				0 or 1(used for Yes/No or T/F)		IsActive, IsDeleted
 
-5)	DECIMAL(p,s)	Exact decimal value(p=total digit	price, money
-			, s=decimal place)		
+5)	DECIMAL(p,s)	Exact decimal value(p=total digit price, money
+					, s=decimal place)		
 
-6)	CHAR(n)		Fixed-length text			Country code like'IND'
-7)	VARCHAR(n)	Variable-length text(up to n)		Name, email, cities
-8)	NVARCHAR(n)	Unicode text(support international	Names in multiple languages
-			 char)
+6)	CHAR(n)			Fixed-length text					Country code like'IND'
+7)	VARCHAR(n)		Variable-length text(up to n)		Name, email, cities
+8)	NVARCHAR(n)		Unicode text(support international	Names in multiple languages
+					char)
 
-9)	DATE		Only the date(yyyy-mm-dd)		Birthdate, join date
-10)	DATETIME	Date+time				Order timestamp, login time
+9)	DATE			Only the date(yyyy-mm-dd)			Birthdate, join date
+10)	DATETIME		Date+time							Order timestamp, login time
 
 
 		Constraints
@@ -287,25 +285,23 @@ Operators:
 ==========
 -> Operator are some character or keywords which is use on an expression to solve any operation.
 
-	  Operator	Meaning			 Example
-	  --------	-------			 -------
-	-> =		Equals			 City='Delhi'
-	-> <> or !=	Not equal to		 Age1 <> 30
-	-> >,<		Greater then, less then	 Age > 25
-	-> >=,<=		Greater/Less or  Equal	Age>=18
-	-> AND		Combine condition	 City='xx' AND Age > 10
-	-> OR		Either condition is 	 City='Delhi' or City='Mumbai'
-		true
-	-> NOT		Negative a condition	 NOT City='Delhi'
+	  Operator		Meaning			 			Example
+	  --------		-------			 			-------
+	-> =			Equals						City='Delhi'
+	-> <> or !=		Not equal to		 		Age1 <> 30
+	-> >,<			Greater then, less then	 	Age > 25
+	-> >=,<=		Greater/Less or  Equal		Age>=18
+	-> AND			Combine condition	 		City='xx' AND Age > 10
+	-> OR			Either condition is true	City='Delhi' or City='Mumbai'
+		
+	-> NOT			Negative a condition		NOT City='Delhi'
 
 
 		OPERATOR
 		========
-1) BETWEEN Operator -> The BETWEEN operator is used to filter result within a range 
-		       (inclusive of the satrt and end value)
+1) BETWEEN Operator -> The BETWEEN operator is used to filter result within a range (inclusive of the satrt and end value)
 
-2) IN Operator -> The IN operator is used to match a column against multiple values 
-		  without writing multiple or conditions.
+2) IN Operator -> The IN operator is used to match a column against multiple values without writing multiple or conditions.
 
 3) LIKE Operator -> It is uses for pattern margin with string in SQL.
 		    -> % - Matches zero or more characters. ('a%' - starting , '%e' - ending, '%ar%')
@@ -343,19 +339,16 @@ Note: WHERE filters brfore grouping
 Concept of JOINS
 ================
 
-Types		What It Does			Real-life analogy
------		------------			-----------------
-INNER JOIN	Only matching data from		People who placed orders
-		both table
+Types			What It Does										Real-life analogy
+-----			------------										-----------------
+INNER JOIN		Only matching data from both table					People who placed orders
 
-LEFT JOIN	All from left table+matches	All customers, ever those with
-		from right			no orders
+LEFT JOIN		All from left table+matches from right				All customers, ever those with no orders	
 
-RIGHT JOIN	All from right table+match 	All orders, even if customer
-		from left(less common)		details are missing
+RIGHT JOIN		All from right table+match from left(less common)	All orders, even if customer details are missing
 
-FULL JOIN	All data from both,matched	Everyone and everything
-		or not
+FULL JOIN		All data from both,matched or not					Everyone and everything
+		
 
 Assumed tables (used across questions):
 =======================================
