@@ -470,6 +470,10 @@ join (selectavg(salary) sal from employee) avg_sal on e.salary > avg_sal.sal;
 
 2) Multiple row Subquary
 ------------------------
+Types of Multiple  row subquary
+-------------------------------
+=> subquary which retirns multiple column and multiple row
+=> subquary which retirns only 1 column and multiple rows
 
 
 3) Correlated Subquary
