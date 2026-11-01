@@ -17,14 +17,14 @@
 -> Platform is a combination of OS & Processor.
 
 -> Types of Platform..
-   ---------------------
+   -------------------
 	1) Platform Independent
 	2) Platform Dependent
 
 1) Platform Independent:
-
+ 
   => It is a combination of Any OS & Any Processer
-
+  
   Ex: Oracle
 
 2) Platform Dependent
@@ -83,14 +83,14 @@ Installing process
 	-------------------------------
 	|1) Server Type:_____>	       |
 	|2) Server Name:_____>	       |
-	|3) Authention :_____>         |
+	|3) Authention:_____>          |
 	|3) User Name:_______	       |
 	|4) Password: _______	       |
-	|			       |
+	|			       			   |
 	|Connect: Cancle: Help: Option:|
 	-------------------------------
 
-1) Server Types:
+1) Server Type:
 ================
 	1> Database Engine
 	2> Analysis Services (SSAS)
@@ -173,8 +173,8 @@ Types of Database?
 
 Ex: SQL, Oracle, Mysql
 
-2) NoSQL
---------
+2) Non-Relational(NoSQL)
+------------------------
 -> Data is in Unstructured or Semistructures.
 
 -> data can store in key-value pair, graph, wide columns, document.
@@ -324,7 +324,7 @@ Operators:
 
 Function	What it does	Example in Context
 --------	------------	------------------
-COUNT()		Counts rows	How many customers You have
+COUNT()		Counts rows	    How many customers You have
 SUM()		Adds up values	Total of all customer ages
 AVG()		Average value	Average age of customers
 MIN()		Minimum value	Youngest customer's age
@@ -374,13 +374,15 @@ JOINS
 =====
 ### Fetch the employee name and the department name they belongs to ###
 
-1) Inner JOIN / JOIN 
+1) Inner JOIN / JOIN
+--------------------
 -> it will try to fetch only those records which are prestent in both the tables
 
 select e.emp_name, d.dept_name 
 from employee e INNER JOIN department d ON e.dept_id = d.dept_id;
 
 2) LEFT JOIN
+------------
 ### Fetch all the employee name and their department name they belongs to ###
 
 select e.emp_name,  d.dept_name
@@ -389,6 +391,7 @@ from employee e Left Join department d ON e.dept_id = d.dept_id;
 -- Left join = inner join + any additional records from the left table
 
 3) RIGHT Join
+-------------
 ### Fetch the employee name and their all department name they belongs to ###
 
 select e.emp_name, d.dept_name
@@ -406,7 +409,7 @@ INNER JOIN manager m ON m.manager_id = e.manager_id
 LEFT JOIN projects p ON p.emp_id = e.emp_id;
 
 4) FULL JOIN
-
+------------
 select e.emp_name, d.dept_name
 from employee e 
 FULL JOIN depatment d ON e.dept_name = d.dept_name;
@@ -414,6 +417,7 @@ FULL JOIN depatment d ON e.dept_name = d.dept_name;
 --- full join = Inner join + all remaining records from Left table + all remaining record from Right table
 
 5) CROSS JOIN
+-------------
 ### CROSS JOIN retirns cartesion product. it give 6*4=24
 
 select e.emp_name, d.dept_name
@@ -427,17 +431,24 @@ from employee e
 INNER JOIN department d ON e.dept_id = d.dept_id
 CROSS JOIN company c;
 
-6) NATURAL JOIN 
-
+6) NATURAL JOIN
+---------------
 select e.emp_name, d.dept_name
 from employee e 
 NATURAL JOIN department d;
 
 7) SELF JOIN 
-
+------------
 ### write a quary to fetch the child name and their age corresponding to their parent name and parent id
 
 select child.name as child_name, child.age as child_age, 
 parent.name as parent_name, parent.age as parent_age
 from family as child
 JOIN family as parent ON child.parent_id = parent.member_id;
+
+
+			SUBQUERY
+			========
+select * from employee;
+select * from department;
+
