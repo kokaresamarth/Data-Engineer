@@ -336,8 +336,8 @@ Note: WHERE filters brfore grouping
       HAVING filters after grouping
 
 
-Concept of JOINS
-================
+						Concept of JOINS
+						################
 
 Types			What It Does										Real-life analogy
 -----			------------										-----------------
@@ -441,7 +441,7 @@ JOIN family as parent ON child.parent_id = parent.member_id;
 
 
 			SUBQUERY
-			========
+			########
 select * from employee;
 select * from department;
 
@@ -461,7 +461,7 @@ Types of SUBQUERY
 3) Correlated Subquary
 
 1) Scalar Subquary
-------------------
+==================
 -> It always returns 1 row and 1 column
 
 select *
@@ -469,12 +469,159 @@ from employee e
 join (selectavg(salary) sal from employee) avg_sal on e.salary > avg_sal.sal;
 
 2) Multiple row Subquary
-------------------------
-Types of Multiple  row subquary
+========================
+Types of Multiple row subquary
 -------------------------------
 => subquary which retirns multiple column and multiple row
 => subquary which retirns only 1 column and multiple rows
 
+=> subquary which retirns multiple column and multiple row
+----------------------------------------------------------
+### Find the employee who earn the highest salary in each department
+
+select dept_name, max(salary)
+from employee
+group by dept_name
+
+select *
+from employee
+where (dept_name, salary) in (select dept_name, max(salary)
+							  from employee
+							  group by dept_name);
+
+=> subquary which retirns only 1 column and multiple rows
+---------------------------------------------------------
+### Fimd department who do not have any employees
+
+select *
+from department
+where dept_name not in (select distinct dept_name from employee);
 
 3) Correlated Subquary
-----------------------
+======================
+-> A subquary which is related to the outer quary.
+
+### Find the employees in each department who earn more than the average salary in that department
+
+select avg(salary) from employee where dept_name = "specific_dept"
+
+select *
+from employee e1
+where salary > (select avg(salary)
+				from employee e2
+				where e2.dept_name = e1.dept_name);
+				
+### Find department who do not have any employee
+
+select *
+from department d
+where not exists (select * from employee e where e.dept_name = d.dept_name);
+
+Subquary inside a Subquary(Nested Subquary)
+===========================================
+select * from sales;
+
+### Find stores who's sales where better than the average sales across all stores
+1) find the total sales for each store.
+2) find avg sales for all the store.
+3) compare 1 & 2
+
+select *
+from (select store_name, sum(price) as total_sales
+	  from sales
+	  group by store_name) sales
+join (select avg(total_sales) as sales
+	from (select store_name, sum(price) as total_sales
+		  from sales
+		  group by store_name) x) avg_sales
+	on sales.total_sales > avg_sales.sales;
+
+--or--
+
+with sales as 
+	(select store_name, sum(price) as total_sales
+	 from sales
+	 group by store_name)
+select *
+from sales
+join (select avg(total_sales) as sales
+	from sales x) avg_sales
+	on sales.total_sales > avg_sales.sales; 
+	
+Usng subquary in SELECT clause
+==============================
+
+### Fetch all employee details and add remarks to those employees who earn more than the average pay
+
+
+select *
+, (case when salary > (select avg(salary) from employee)
+			then 'Higher than average'
+		else null
+	end ) as remarks
+from employee;
+
+--or--
+
+select *
+, (case when salary > avg_sal.sal
+			then 'Higher than average'
+		else null
+	end ) as remarks
+from employee
+cross join (select avg(salary) sal from employee) avg_sal;
+
+Usng subquary in HAVING clause
+==============================
+
+### Find the stores who have sold more units than the average units sold by all stores
+
+select store_name, sum(quantity)
+from sales
+group by store_name
+having sum(quantity) > (select avg(quantity) from sales);
+
+SQL commands for subquary
+=========================
+- SQL Quary
+- INSERT 
+- UPDATE
+- DELETE
+
+--INSERT 
+### Insertdata to employee history table. make sure not insert duplicate records
+
+select * from employee_history;
+
+insert into employee_history
+select e.emp_id, e.emp_name, d.dept_name, e.salary, d.location
+from employee e
+join department d on d.dept_name = e.dept_name
+where not exists (select 1
+				  from employee_history eh
+				  where eh.emp_id = e.emp_id);
+				  
+
+-- UPDATE
+### Give 10% increment to all employee in BNG location based on the maximum salary earned by an emp dept. Only consider employees in employee_history table
+
+update employee e
+set salary = (select max(salary) + (max(salary) * 0.1)
+			  from employee_history eh
+			  where eh.dept_name = e.dept_name)
+where e.dept_name in (select dept_name
+					  from department
+					  where location='Bangalore')
+and e.emp_id in (select emp_id from employee_history);
+
+
+-- DELETE
+### Delete all department who do not have any employee
+
+delete from department
+where dept_name in (select dept_name
+					from department d
+					where not exists (select 1
+									  from employee e
+									  where e.dept_name = d.dept_name)
+					);
