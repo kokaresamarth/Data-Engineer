@@ -229,7 +229,7 @@ What is SQL?
 		DataTypes
 		=========
     Data Type			What it store					Example	
-	---------			--------------					---------
+	---------			--------------					-------
 1) 	INT				Whole nor (e.g., 1, 100, -50)		storing age, quantity
 2)	BIGINT			Very large Whole nor				Tracking large ID's or counts
 3)	TINYINT			Small nor (0 to 255)				Status flags, rating out of 10
@@ -454,7 +454,7 @@ from employee;
 
 select *   --- outer/main quary
 from employee
-where salary > (select avf(salary)from employee);		--- inner/subquary
+where salary > (select avg(salary)from employee);		--- inner/subquary
 
 Types of SUBQUERY
 =================
@@ -468,7 +468,7 @@ Types of SUBQUERY
 
 select *
 from employee e
-join (selectavg(salary) sal from employee) avg_sal on e.salary > avg_sal.sal;
+join (select avg(salary) sal from employee) avg_sal on e.salary > avg_sal.sal;
 
 2) Multiple row Subquary
 ========================
